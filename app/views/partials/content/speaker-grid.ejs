@@ -1,0 +1,62 @@
+<div class="container">
+    <!-- http://davist11.github.io/css-diamond-grid/# -->
+  <div class="grid">
+    <% if ( pageID == 'home' ) { %>
+    <div class="grid-item grid-title">
+      <div class="grid-inner"><a href="/speakers">Speakers</a></div>
+    </div>
+    <% } %>
+
+    <% speakers.forEach( function( speaker ) { %>
+        <% if ( pageID == 'speakers' ) { %>
+            <article class="speaker">
+        <% } %>
+    <div class="grid-item photo">
+        <div class="grid-inner">
+            <figure  class="diamonds-item photo rhombus bg-primary">
+                <img class="speaker-img" src="/img/people/<%= speaker.img %>">
+            </figure>
+
+            <% if ( pageID == 'home' ) { %>
+            <div class="speaker-meta-box">
+                <div class="speaker-meta">
+                    <a href="/speakers/<%= speaker.shortname %>">
+                        <p class="speaker-name"><%= speaker.name %></p>
+                    </a>
+                    <p class="speaker-affiliation"><%= speaker.affiliation %></p>
+                    <p class="speaker-details"><%= speaker.other %></p>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+    <% if ( pageID !== 'home' ) { %>
+        <% if ( pageID !== 'speakers' ) { %>
+            <div class="speaker-info-section">
+        <% } %>
+        <div class="speaker-meta">
+            <p class="speaker-name"><a href="/speakers/<%= speaker.shortname %>"><%= speaker.name %></a></p>
+            <p class="speaker-affiliation"><%= speaker.affiliation %></p>
+            <p class="speaker-session"><strong>Talk / </strong><a href="/speakers/<%= speaker.shortname %>"><%= speaker.title %></a></p>
+        </div>
+
+        <% if ( pageID == 'speakers' ) { %>
+        </article>
+        <% } %>
+
+        <% if ( pageID !== 'speakers' ) { %>
+            <div class="speaker-info">
+                <p class="speaker-abstract"><%- speaker.abstract %></p>
+                <h2 class="speaker-bio-title">About <%= speaker.nickname %></h2>
+                <p class="speaker-bio"><%- speaker.bio %></p>
+            </div>
+        </div><!-- .speaker-details -->
+        <% } %>
+    <% } %>
+
+
+    <% }); %>
+
+  <!--     <a class="page-button button">Register today!</a> -->
+</div>
