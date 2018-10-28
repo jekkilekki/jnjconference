@@ -1,7 +1,24 @@
-<header class="site-header">
-  <div class="site-banner">
-    <p class="container">Nov 11, 2017 / 1pm / <a href="/location">Jeonju</a></p>
+<div class="site-banner">
+  <div class="container">
+    <hgroup class="site-title">
+      <a href="/">
+        <img src="/img/jnj-kotesol-logo-white.png">
+        <h1><span class="screen-reader-text">Jeonju-North Jeolla KOTESOL</span> 2018 Regional Conference</h1>
+      </a>
+    </hgroup>
+    <p>Nov 17, 2018 / 1pm / <a href="/location">Jeonju</a>
+      <button class="site-mobile-menu-button show"><i class="fa fa-bars"></i> Menu</button>
+    </p>
   </div>
+</div>
+
+<header class="site-header">
+  <% if ( pageID == 'home' ) { %>
+    <div class="hero">
+      <h1 class="keyword-one">Memorization</h1>
+      <h1 class="keyword-two">Understanding</h1>
+    </div>
+  <% } %>
 
   <div class="site-menu-bar">
     <div class="container">
@@ -24,7 +41,7 @@
           <li class="site-menu-item supplementary"><a href="/privacy">Privacy Policy</a></li>
           <li class="site-menu-item supplementary"><a href="mailto:jnjconference@gmail.com">Contact Us</a></li>
         </ul>
-        <a class="button ticket-button" href="/chat">Chat</a>
+        <a class="button ticket-button" href="/chat">Booklet</a>
       </nav>
     </div>
     <!-- .container -->

@@ -7,26 +7,38 @@
 
         <% include partials/template/header-menu.ejs %>
 
-        <main class="site-content">
-            <% include partials/content/hero.ejs %>
+        <% if ( pageID == 'home' ) { %>
+            <main class="site-content">
+                <% include partials/content/hero.ejs %>
+        <% } else { %>
+            <main class="site-content floating">
+        <% } %>
 
-            <section class="page-section speakers gradient">
+            <section class="page-section whatis">
+                <% include partials/content/whatis.ejs %>
+            </section>
+
+            <section class="page-section speakers">
                 <% include partials/content/speaker-grid.ejs %>
             </section>
 
-            <section class="page-section schedule">
+            <section class="page-section schedule parallax">
                 <% include partials/content/schedule.ejs %>
             </section>
 
-            <section class="page-section buzz gradient">
+            <section class="page-section buzz">
                 <% include partials/content/buzz.ejs %>
+            </section>
+
+            <section class="page-section keypts">
+                <% include partials/content/keypts.ejs %>
             </section>
 
             <section class="page-section gallery">
                 <% include partials/content/gallery.ejs %>
             </section>
 
-            <section class="page-section sponsors gradient">
+            <section class="page-section sponsors">
                 <% include partials/content/sponsors-list.ejs %>
             </section>
 

@@ -15,7 +15,7 @@ app.set( 'appData', dataFile );
 app.set( 'view engine', 'ejs' ); // Set the Views engine
 app.set( 'views', 'app/views' );
 
-app.locals.siteTitle = 'Jeonju-North Jeolla KOTESOL Regional Conference';
+app.locals.siteTitle = '2018 Jeonju-North Jeolla KOTESOL Regional Conference';
 app.locals.allSpeakers = dataFile.speakers;
 
 app.use( express.static( 'app/public' ) ); // adds the public folder to routes to use images, files, etc easily
