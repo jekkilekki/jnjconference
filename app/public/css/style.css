@@ -457,6 +457,7 @@ li {
 --------------------------------------------------------------*/
 .site-banner {
   position: fixed;
+  top: 0;
   width: 100vw;
   background: #004369;
   font-weight: bold;
@@ -833,6 +834,14 @@ body {
   top: calc( 100vh - 18rem );
 }
 
+.hero-small {
+  z-index: -1;
+}
+
+.hero-small img {
+  max-width: 100%;
+}
+
 .page-info .container {
   display: none;
 }
@@ -1010,6 +1019,10 @@ body {
 .page-button {
   background: white;
   color: #FF1926;
+  border: 1px solid #ff1926;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
+  cursor: pointer;
   font-size: 1.1rem;
   /* line-height: 2.6rem; */
   padding: 1rem 3rem 0.9rem!important;
@@ -1556,6 +1569,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   margin-bottom: 2rem;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 36rem) {
@@ -1568,6 +1582,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   padding-bottom: 4rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .subscriber-email {
@@ -1599,7 +1614,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .keypts {
   background: #FF1926;
-  padding: 3rem 0 2rem;
+  padding: 5rem 0 3rem;
   margin: 0;
   color: white;
 }
@@ -1626,7 +1641,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 /*   background: #CCC; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 
 .grid::after {
@@ -1835,17 +1850,60 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .googlemap {
         position: relative;
-        padding-bottom: 40%; 
+        padding-bottom: 50%; 
         height: 0;
         overflow: hidden;
+        background-image: url('../img/bg/2018-conf-white.jpg');
+        background-size: cover;
+        background-position: center;
     }
     .googlemap iframe {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100% !important;
-        height: 100% !important;
+        width: calc( 100% - 12rem )!important;
+        height: calc( 100% - 12rem )!important;
+        margin: 6rem;
     }
+
+.discoverjeonju {
+  background-color: #004369;
+  text-align: center;
+  padding: 8rem;
+  color: white;
+  position: relative;
+}
+
+.discoverjeonju:before {
+  content: '';
+  background-image: url('../img/location/jju-huge-crop-2.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  /* z-index: -1; */
+}
+
+.discoverjeonju:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 160px;
+  border-bottom-left-radius: 160px;
+  border-top-left-radius: 160px;
+  background-color: #ff1926;
+  right: 0px;
+  bottom: -80px;
+  z-index: 10;
+}
+
+.discoverjeonju div {
+  z-index: 1;
+}
 
 .site-footer {
   background: #ffcc00;
@@ -2022,7 +2080,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .site-credits {
   background: #004369;
   color: rgba(255,255,255,0.7);
-  padding: 3rem 0;
+  padding: 2rem 0 0.25rem;
   text-align: center;
   font-weight: 300;
 }
@@ -2037,12 +2095,28 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .copyright {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+}
+
+.copyright span {
+  display: block;
+  font-size: 0.8rem;
 }
 
 .credits {
+  padding-top: 0.25rem;
   line-height: 1.5;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.credits span:first-child {
+  text-align: left;
 }
 
 
