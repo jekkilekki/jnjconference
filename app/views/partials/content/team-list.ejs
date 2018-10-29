@@ -1,16 +1,16 @@
 <div class="container">
 
-  <h2 class="page-section-title">Organizing Team</h2>
+  <h2 class="section-title">Organizing Team</h2>
     <!-- http://davist11.github.io/css-diamond-grid/# -->
   <div class="grid">
 
     <% team.forEach( function( member ) { %>
             <article class="speaker team-member">
     <div class="grid-item photo">
-        <div class="grid-inner">
-            <figure  class="diamonds-item photo rhombus bg-primary">
+        <div class="grid-inner" style="background-image: url('/img/people/<%= member.img %>');">
+            <!-- <figure  class="diamonds-item photo rhombus bg-primary">
                 <img class="speaker-img" src="/img/people/<%= member.img %>">
-            </figure>
+            </figure> -->
         </div>
     </div>
 

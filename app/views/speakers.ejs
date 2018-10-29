@@ -9,12 +9,12 @@
         <main class="site-content">
             <% include partials/content/hero.ejs %>
 
-            <section class="page-section speakers gradient">
+            <section class="page-section speakers">
                 <% include partials/content/speaker-grid.ejs %>
             </section>
 
             <% if ( pageID == 'speakers' ) { %>
-                <section class="page-section buzz gradient">
+                <section class="page-section buzz">
                     <% include partials/content/buzz.ejs %>
                 </section>
             <% } else { %>

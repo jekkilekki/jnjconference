@@ -839,7 +839,7 @@ body {
 }
 
 .hero-small img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .page-info .container {
@@ -1315,6 +1315,23 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   z-index: 10;
 }
 
+.schedule.no-bg {
+  background: white;
+}
+
+.schedule.no-bg h2 {
+  color: #004369;
+  text-shadow: none;
+}
+
+.schedule .info {
+  text-align: center;
+  color: #004369;
+  margin-top: -2rem;
+  /* font-style: italic; */
+  font-size: 0.9rem;
+}
+
 .conference-schedule {
   color: white;
   padding-bottom: 6rem;
@@ -1412,6 +1429,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   background: #ffcc00;
   background: hsla(48, 100, 50, 0.8);
   background: rgba(255, 204, 0, 0.8);
+  color: black;
 }
 
 .schedule-venue { /* Cyan */

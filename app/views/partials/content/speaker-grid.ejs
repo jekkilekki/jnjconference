@@ -10,7 +10,7 @@
 
     <% speakers.forEach( function( speaker ) { %>
         <% if ( pageID == 'speakers' ) { %>
-            <article class="speaker">
+            <!-- <article class="speaker"> -->
         <% } %>
     <div class="grid-item photo">
         <div class="grid-inner" style="background-image: url('/img/people/<%= speaker.img %>')">
@@ -40,7 +40,7 @@
         </div>
 
         <% if ( pageID == 'speakers' ) { %>
-        </article>
+        <!-- </article> -->
         <% } %>
 
         <% if ( pageID !== 'speakers' ) { %>

@@ -10,10 +10,14 @@
         <main class="site-content">
             <% include partials/content/hero.ejs %>
 
-            <section class="page-section feedback gradient">
+            <section class="page-section buzz">
+              <% include partials/content/buzz.ejs %>
+            </section>
+
+            <section class="page-section feedback">
                 <div class="container">
                   <aside class="recent-feedback">
-                      <h2 class="page-section-title">Recent Feedback</h2>
+                      <h2 class="section-title">Recent Feedback</h2>
                       <ul class="feedback-messages"></ul>
                   </aside>
 
@@ -45,10 +49,6 @@
                     <small>Problems? Send an <a href="mailto:jnjconference@gmail.com">Email</a></small>
                   </form>
                 </div><!-- container -->
-            </section>
-
-            <section class="page-section buzz">
-                <% include partials/content/buzz.ejs %>
             </section>
         </main>
 

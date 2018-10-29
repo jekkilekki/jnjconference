@@ -11,10 +11,7 @@
 
         <% listSpeakers.forEach( function( speaker ) { %>
         <div class="grid-item photo">
-            <div class="grid-inner">
-                <figure  class="diamonds-item photo rhombus bg-primary">
-                    <img class="speaker-img" src="/img/people/<%= speaker.img %>">
-                </figure>
+            <div class="grid-inner" style="background-image: url('/img/people/<%= speaker.img %>')">
 
                 <div class="speaker-meta-box">
                     <div class="speaker-meta">
