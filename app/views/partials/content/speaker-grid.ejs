@@ -14,7 +14,11 @@
         <% } %>
     <div class="grid-item photo">
         <div class="grid-inner" style="background-image: url('/img/people/<%= speaker.img %>')">
-
+            
+        <% if ( pageID !== 'home' ) { %>
+            <div class="attendee-img-shadow"></div>
+            <div class="attendee-img-shadow-yellow"></div>
+        <% } %>
             <% if ( pageID == 'home' ) { %>
             <div class="speaker-meta-box">
                 <div class="speaker-meta">
@@ -33,10 +37,16 @@
         <% if ( pageID !== 'speakers' ) { %>
             <div class="speaker-info-section">
         <% } %>
-        <div class="speaker-meta">
-            <p class="speaker-name"><a href="/speakers/<%= speaker.shortname %>"><%= speaker.name %></a></p>
-            <p class="speaker-affiliation"><%= speaker.affiliation %></p>
-            <p class="speaker-session"><strong>Talk / </strong><a href="/speakers/<%= speaker.shortname %>"><%= speaker.title %></a></p>
+        <div>
+            <div class="speaker-meta">
+                <p class="speaker-name"><a href="/speakers/<%= speaker.shortname %>"><%= speaker.name %></a></p>
+                <p class="speaker-affiliation"><%= speaker.affiliation %></p>
+            </div>
+
+            <div class="speaker-meta-info-box speaker-meta">
+                <p class="speaker-session"><strong>Talk / </strong><a href="/speakers/<%= speaker.shortname %>"><%= speaker.title %></a></p>
+                <%= speaker.summary %>
+            </div>
         </div>
 
         <% if ( pageID == 'speakers' ) { %>
@@ -57,6 +67,14 @@
     <% }); %>
 
     <% if ( pageID !== 'speakers' ) { %>
+    <div class="speaker-grid-last">
+      <div class="testimonial">
+        <blockquote>
+          KOTESOL organizes fantastic, inspiring conferences.
+          <cite>Angela<span>KOTESOL member since 2018</span></cite>
+        </blockquote>
+      </div>
+    </div>
     <div class="page-button-container">
         <a class="page-button button" href="/speakers">View All Speaker Details</a>
     </div>

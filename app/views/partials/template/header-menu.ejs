@@ -20,7 +20,11 @@
     </div>
   <% } %>
 
-  <div class="site-menu-bar">
+  <% if ( pageID === 'home' ) { %>
+    <div class="site-menu-bar">
+  <% } else { %> 
+    <div class="site-menu-bar smaller">
+  <% } %>
     <div class="container">
       <figure class="logo">
         <a href="/">

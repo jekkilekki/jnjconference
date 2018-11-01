@@ -330,6 +330,10 @@ th {
 	outline: 0;
 }
 
+.show {
+  display: inline-block!important;
+}
+
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
@@ -539,7 +543,10 @@ li {
   flex-wrap: no-wrap;
   justify-content: space-between;
   padding: 1rem 2rem;
-/*   max-height: 50px; */
+}
+
+.site-menu-bar.smaller .container {
+  max-height: 54px;
 }
 
 .site-navigation {
@@ -653,6 +660,11 @@ li {
   color: white;
   cursor: pointer;
   line-height: 2.6;
+}
+
+.site-menu-bar.smaller .site-menu-item a {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .site-menu-item a:hover {
@@ -885,6 +897,12 @@ body {
   padding-top: 0.9rem!important;
 }
 
+.site-menu-bar.smaller .ticket-button {
+  padding-top: 0.5rem!important;
+  height: 30px;
+  margin-top: -0.3rem;
+}
+
 .page-info {
 /*   font-family: 'Open Sans Condensed', sans-serif; */
 }
@@ -1115,6 +1133,28 @@ body {
   }
 }
 
+.testimonial {
+  color: white;
+  font-family: "EB Garamond";
+  font-size: 1.4rem;
+}
+
+.testimonial blockquote {
+  padding: 3rem;
+}
+
+.testimonial cite {
+  font-family: "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: block;
+  font-size: 1rem;
+  padding-top: 1rem;
+  text-align: right;
+}
+
+.testimonial cite span {
+  display: block;
+}
+
 .speakers {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1160,7 +1200,7 @@ body {
     visibility: visible;
 }
 
-.speaker-meta p {
+.speaker-meta .speaker-session {
   margin: 0 auto;
   font-size: 0.8rem;
 }
@@ -1170,7 +1210,7 @@ body {
 }
 
 @media screen and (min-width: 36rem) {
-  .speaker-meta p {
+  .speaker-meta .speaker-session {
     /* max-width: 80%; */
   }
 
@@ -1180,13 +1220,13 @@ body {
 }
 
 @media screen and (min-width: 46rem) {
-  .speaker-meta p {
+  .speaker-meta .speaker-session {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
-  .speaker-meta p {
+  .speaker-meta .speaker-session {
     font-size: 1.5rem;
   }
 }
@@ -1453,6 +1493,11 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   color: black;
   text-align: center;
   text-transform: uppercase;
+}
+
+.schedule-span span {
+  text-transform: lowercase;
+  font-size: 0.8rem;
 }
 
 .buzz {
@@ -2234,6 +2279,11 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   grid-template-columns: 1fr 3fr;
 }
 
+.speakers .grid .speaker-grid-last {
+  background: #004369;
+  grid-column: span 2;
+}
+
 @media screen and (min-width: 36rem) {
   #speakers article.speaker {
     /* height: 160px; */
@@ -2267,6 +2317,17 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
+#speakers .grid {
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 3fr;
+}
+
+#speakers .speaker-meta-info-box {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+}
+
 #speakers .speaker-meta {
     visibility: visible;
     padding-left: 0px;
@@ -2274,6 +2335,19 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 #speakers .speaker .photo {
   display: none;
+}
+
+#speakers .photo .grid-inner {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: 5px;
+}
+
+#speakers .attendee-img-shadow,
+#speakers .attendee-img-shadow-yellow {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 @media screen and (min-width: 22rem) {
@@ -2306,14 +2380,16 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 #speakers .speaker-meta .speaker-name,
 #speaker-single .speaker-meta .speaker-name {
-    font-size: 1.2rem;
-    font-weight: 400;
+  /* font-family: "EB Garamond"; */
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 #speakers .speaker-meta .speaker-name a,
 #speaker-single .speaker-meta .speaker-name a {
-    color: white;
-    text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
+    color: #004369;
+    /* text-shadow: 0px 2px 4px rgba(0,0,0,0.36); */
 }
 
 #speakers .speaker-meta .speaker-affiliation,
@@ -2337,7 +2413,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   #speakers .speaker-meta .speaker-affiliation,
   #speaker-single .speaker-meta .speaker-affiliation {
     font-size: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
   }
 
   #speakers .speaker-meta .speaker-session,
@@ -2360,7 +2436,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 #speaker-single .speaker-info-section {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   grid-gap: 2rem;
 }
 
@@ -2370,9 +2446,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .speaker-photo {
   display: block;
-  width: calc(100% - 10px);
+  width: 100%;
   height: 250px;
-  margin: 5px;
   background-position: center;
   background-size: cover;
   z-index: 2;
@@ -2381,7 +2456,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .speaker-photo-box .attendee-img-shadow,
 .speaker-photo-box .attendee-img-shadow-yellow {
   width: 100%;
-  height: 260px;
+  height: 250px;
 }
 
 #speaker-single .speaker-info-section,
@@ -2439,6 +2514,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   #team .speaker-info-section {
     /* padding-left: 380px; */
   }
+}
+
+#speaker-single .grid {
+  padding-bottom: 6rem;
+}
+
+#speaker-single .grid-item {
+  height: 200px;
 }
 
 #speaker-single .grid-item.photo,
@@ -2504,6 +2587,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  .team .speaker-bio-title {
    margin-bottom: 1rem;
    margin-top: 0;
+   font-weight: bold;
  }
 
  #speaker-single .speaker-info p {
@@ -2563,36 +2647,36 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
  #speaker-single .speaker-list .grid,
  #schedule .speaker-list .grid {
-   padding: 1rem 0 0rem;
+   /* padding: 1rem 0 0rem; */
  }
 
  @media screen and (min-width: 36rem) {
    #speaker-single .speaker-list .grid {
-     padding: 2rem 0 1rem;
+     /* padding: 2rem 0 1rem; */
    }
 
    #schedule .speaker-list .grid {
-     padding: 2rem 2rem 1rem;
+     /* padding: 2rem 2rem 1rem; */
    }
  }
 
  @media screen and (min-width: 46rem) {
    #speaker-single .speaker-list .grid {
-     padding: 4rem 0 2rem;
+     /* padding: 4rem 0 2rem; */
    }
 
    #schedule .speaker-list .grid {
-     padding: 4rem 4rem 2rem;
+     /* padding: 4rem 4rem 2rem; */
    }
  }
 
  @media screen and (min-width: 56rem) {
    #speaker-single .speaker-list .grid {
-     padding: 6rem 0 4rem;
+     /* padding: 6rem 0 4rem; */
    }
 
    #schedule .speaker-list .grid {
-     padding: 4rem 6rem 2rem;
+     /* padding: 4rem 6rem 2rem; */
    }
 
    #schedule .speaker-list .grid-title {
@@ -2656,15 +2740,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  }
 
  #speaker-single .speaker-list .grid-item.photo {
-     width: 17%;
-     padding-bottom: 17%;
+     /* width: 17%; */
+     /* padding-bottom: 17%; */
      /*margin: 0;*/
      background: transparent;
  }
 
 #speaker-single .speaker-list .grid-item.grid-title {
-  width: 17%;
-  padding-bottom: 17%;
+  /* width: 17%; */
+  /* padding-bottom: 17%; */
   font-size: 0.8rem;
 }
 
@@ -2707,7 +2791,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
    /*float: left;*/
  /*   background: #BBB; */
    /*transform: rotate(45deg);*/
-   margin: 4%;
+   /* margin: 4%; */
    /*margin-top: -8%;*/
    border: none;
  }
@@ -2720,24 +2804,24 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  }
 
  #speaker-single .speaker-list .grid-item:nth-child(5n+5)  {
-   margin-left: 16.5%;
-   margin-top: -8.25%;
+   /* margin-left: 16.5%; */
+   /* margin-top: -8.25%; */
  }
 
 
 #speaker-single .speaker-list .grid-item:nth-child(5n+6) {
-  margin-left: 41.5%;
-  margin-top: -21%;
+  /* margin-left: 41.5%; */
+  /* margin-top: -21%; */
 }
 
 #speaker-single .speaker-list .grid-item:nth-child(5n+7) {
-  margin-left: 66.5%;
-  margin-top: -21%;
+  /* margin-left: 66.5%; */
+  /* margin-top: -21%; */
 }
 
  #speaker-single .speaker-list .grid-item:nth-child(5n+8):last-of-type {
-   margin-left: 36.375%;
-   margin-top: -18.875%;
+   /* margin-left: 36.375%; */
+   /* margin-top: -18.875%; */
  }
 
  /**
@@ -2756,6 +2840,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 #schedule .grid {
   padding: 6rem;
 }
+
+/* #speaker-single .grid {
+  padding: 0 6rem 6rem;
+} */
 
 /**
  * -----------------------------------------------------------------------------
