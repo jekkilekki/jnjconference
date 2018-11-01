@@ -9,16 +9,19 @@
         <main class="site-content">
             <% include partials/content/hero.ejs %>
 
-            <section class="page-section speakers">
-                <% include partials/content/speaker-grid.ejs %>
-            </section>
-
-            <% if ( pageID == 'speakers' ) { %>
-                <section class="page-section buzz">
-                    <% include partials/content/buzz.ejs %>
+            <% if ( pageID === 'speakers' ) { %>
+                <section class="page-section speakers red-dot">
+                    <% include partials/content/speaker-grid.ejs %>
                 </section>
+
             <% } else { %>
-                <section class="bottom-speaker-list">
+                <section class="page-section speaker-single">
+                    <% include partials/content/speaker-single.ejs %>
+                </section>
+            <% } %>
+
+            <% if ( pageID !== 'speakers' ) { %>
+                <section class="bottom-speaker-list red-dot">
                     <% include partials/content/speaker-list.ejs %>
                 </section>
             <% } %>
