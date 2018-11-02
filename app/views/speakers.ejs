@@ -11,6 +11,7 @@
 
             <% if ( pageID === 'speakers' ) { %>
                 <section class="page-section speakers red-dot">
+                    <% include partials/template/dots.ejs %>
                     <% include partials/content/speaker-grid.ejs %>
                 </section>
 
@@ -22,6 +23,7 @@
 
             <% if ( pageID !== 'speakers' ) { %>
                 <section class="bottom-speaker-list red-dot">
+                        <% include partials/template/dots.ejs %>
                     <% include partials/content/speaker-list.ejs %>
                 </section>
             <% } %>

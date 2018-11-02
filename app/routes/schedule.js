@@ -20,7 +20,7 @@ router.get( '/schedule', function( request, response ) {
     response.render( 'schedule', {
         pageTitle: 'Schedule',
         pageID: 'schedule',
-        speakers: pageSpeakers,
+        speakers: otherSpeakers,
         listSpeakers: otherSpeakers
     }); // views/index.ejs
 });

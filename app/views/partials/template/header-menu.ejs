@@ -6,11 +6,32 @@
         <h1><span class="screen-reader-text">Jeonju-North Jeolla KOTESOL</span> 2018 Regional Conference</h1>
       </a>
     </hgroup>
-    <p>Nov 17, 2018 / 1pm / <a href="/location">Jeonju</a>
+    <div class="banner-right">
+      <p class="banner-location">Nov 17, 2018 / 1pm / <a href="/location">Jeonju</a></p>
       <button class="site-mobile-menu-button show"><i class="fa fa-bars"></i> Menu</button>
-    </p>
+    </div>
   </div>
 </div>
+
+<nav class="site-navigation mobile-menu">
+  <ul class="site-menu">
+    <div class="container">
+    <li class="site-menu-item supplementary"><a href="/">Home</a></li>
+    <li class="site-menu-item supplementary"><a href="/speakers">Speakers</a></li>
+    <li class="site-menu-item supplementary"><a href="/schedule">Schedule</a></li>
+    <li class="site-menu-item supplementary"><a href="/location">Location</a></li>
+    <li class="site-menu-item supplementary"><a href="/sponsors">Sponsors</a></li>
+    <li class="site-menu-item supplementary"><a href="/feedback">Feedback</a></li>
+    <li role="separator" class="site-menu-item supplementary line"></li>
+    <li class="site-menu-item supplementary"><a href="/team">About</a></li>
+    <li class="site-menu-item supplementary"><a href="/code-of-conduct">Code of Conduct</a></li>
+    <li class="site-menu-item supplementary"><a href="/privacy">Privacy Policy</a></li>
+    <li class="site-menu-item supplementary"><a href="mailto:jnjconference@gmail.com">Contact Us</a></li>
+    <li role="separator" class="site-menu-item supplementary line"></li>
+    <li class="site-menu-item supplementary"><a class="red-text" href="/team">Booklet</a></li>
+  </div>
+  </ul>
+</nav>
 
 <header class="site-header">
   <% if ( pageID == 'home' ) { %>
@@ -26,11 +47,6 @@
     <div class="site-menu-bar smaller">
   <% } %>
     <div class="container">
-      <figure class="logo">
-        <a href="/">
-          <img class="logo" src="/img/kotesol-logo.png">
-        </a>
-      </figure>
       <nav class="site-navigation">
         <button class="site-mobile-menu-button"><i class="fa fa-bars"></i> Menu</button>
         <ul class="site-menu">
@@ -39,11 +55,6 @@
           <li class="site-menu-item"><a href="/location">Location</a></li>
           <li class="site-menu-item"><a href="/sponsors">Sponsors</a></li>
           <li class="site-menu-item"><a href="/feedback">Feedback</a></li>
-          <li role="separator" class="site-menu-item supplementary line"></li>
-          <li class="site-menu-item supplementary"><a href="/team">About</a></li>
-          <li class="site-menu-item supplementary"><a href="/code-of-conduct">Code of Conduct</a></li>
-          <li class="site-menu-item supplementary"><a href="/privacy">Privacy Policy</a></li>
-          <li class="site-menu-item supplementary"><a href="mailto:jnjconference@gmail.com">Contact Us</a></li>
         </ul>
         <a class="button ticket-button" href="/chat">Booklet</a>
       </nav>
@@ -53,7 +64,9 @@
   <!-- .site-menu-bar -->
   <% if ( pageID !== 'home' ) { %>
     <div class="hero-small">
-      <img src="/img/bg/2018-conf-horizontal-sm.jpg" />
+      <a href="/">
+        <img src="/img/bg/2018-conf-horizontal-sm.jpg" />
+      </a>
     </div>
   <% } %>
 </header>
