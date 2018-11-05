@@ -1797,6 +1797,28 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   grid-gap: 4rem;
 }
 
+@media screen and (min-width: 32rem) and (max-width: 46rem) {
+  .keypoint {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0rem;
+  }
+}
+
+@media screen and (max-width: 46rem) {
+  .keypts .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* @media screen and (min-width: 26rem) {
+  .keypoint {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0rem;
+  }
+} */
+
 .keypoint img {
   width: 120px;
 }
