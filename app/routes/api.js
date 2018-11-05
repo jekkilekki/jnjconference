@@ -17,7 +17,7 @@ router.use( bodyParser.urlencoded( { extended: false } ) ); // takes care of rea
 
 router.post( '/api', function( request, response ) {
     feedbackData.unshift( request.body );
-    fs.writeFile( 'app/data/feedback.json', JSON.stringify( feedbackData ), 'utf8', function(err) {
+    fs.writeFile( '../data/feedback.json', JSON.stringify( feedbackData ), 'utf8', function(err) {
         if ( err ) {
             console.log( err ); // Show the write error
         }
@@ -27,7 +27,7 @@ router.post( '/api', function( request, response ) {
 
 router.delete( '/api/:id', function( request, response ) {
     feedbackData.splice( request.params.id, 1 );
-    fs.writeFile( 'app/data/feedback.json', JSON.stringify( feedbackData ), 'utf8', function(err) {
+    fs.writeFile( '../data/feedback.json', JSON.stringify( feedbackData ), 'utf8', function(err) {
         console.log( err ); // Show the write error
     });
     response.json( feedbackData );

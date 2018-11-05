@@ -1,5 +1,5 @@
 // Vanilla JS
-var socket = io();
+var socket = io.connect( 'http://conference.jnjkotesol.com' );
 var chatUsername = document.querySelector( '#chat-username' );
 var chatMessage = document.querySelector( '#chat-message' );
 var nameFormGroup = document.querySelector( '.name-form-group' );

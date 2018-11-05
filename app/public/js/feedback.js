@@ -14,7 +14,7 @@ $( function() {
             name: $( '#feedback-form-name' ).val(),
             title: $( '#feedback-form-title' ).val(),
             message: $( '#feedback-form-message' ).val(),
-            feedbackType: rating
+            // feedbackType: rating
         }, updateFeedback );
     });
 
@@ -56,5 +56,7 @@ $( function() {
         });
 
         $( '.feedback-messages' ).html( output );
+        $( '#feedback-form-title' ).val("");
+        $( '#feedback-form-message' ).val("");
     }
 });

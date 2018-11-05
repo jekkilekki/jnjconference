@@ -499,13 +499,19 @@ li {
 .site-menu-bar.active .site-menu {
   display: block;
   position: absolute;
-  top: 3.25rem;
+  top: 3rem;
   right: -2rem;
   width: 100vw;
   height: 100vh;
   z-index: 2;
   background: white;
   align-self: flex-start;
+}
+
+@media screen and (min-width: 26rem) {
+    .site-menu-bar.active .site-menu {
+        top: 3.25rem;
+    }
 }
 
 .site-menu-bar.active .site-menu li {
@@ -1086,12 +1092,19 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .header-svg {
   fill: rgb(176,190,197);
-  margin-bottom: -5px;
+  margin-bottom: -6px;
 }
 
 .footer-svg {
   fill: #607d8b;
-  margin-bottom: -5px;
+  margin-bottom: -6px;
+}
+
+@media screen and (min-width: 26rem) {
+    .header-svg,
+    .footer-svg {
+        margin-bottom: -5px;
+    }
 }
 
 .partners-svg,
@@ -1624,6 +1637,16 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   font-weight: 300;
   line-height: 1.8;
   font-size: 0.8rem;
+}
+
+.conference-details-nav a span {
+    display: none;
+}
+
+@media screen and (min-width: 26rem) {
+    .conference-details-nav a span {
+        display: inline-block;
+    }
 }
 
 @media screen and (min-width: 36rem) {
@@ -2745,7 +2768,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 #home .sponsors {
-  padding: 0;
+  padding-bottom: 2rem;
 }
 
 .sponsors p {
@@ -2916,10 +2939,19 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .sponsor-list-item {
   min-height: 100px;
   margin: 3rem 1rem 0;
+  transition: all 0.3s;
+}
+
+.sponsor-list-item:hover img {
+  transform: scale(1.1) translateX(-48%);
 }
 
 li.sponsor-list-item.hosting-parter {
   margin: 0!important;
+}
+
+li.sponsor-list-item.hosting-partner:hover img {
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 26rem) {
@@ -3036,9 +3068,16 @@ h4.sponsor-section-title {
     margin: 0 auto;
     /* max-width: 300px; */
     position: absolute;
-    top: 95px;
+    top: 6rem;
     left: 0;
     /*visibility: hidden;*/
+}
+
+@media screen and (min-width: 66rem) {
+    .sponsor-meta {
+        top: auto;
+        bottom: 2rem;
+    }
 }
 
 .sponsor-list-item:hover .sponsor-meta {

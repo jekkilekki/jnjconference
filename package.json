@@ -1,7 +1,7 @@
 {
   "name": "expressjs",
   "version": "1.0.0",
-  "description": "Jeonju-North Jeolla KOTESOL Regional Conference website",
+  "description": "2017 Jeonju-North Jeolla KOTESOL Regional Conference website",
   "main": "app/app.js",
   "scripts": {
     "start": "nodemon -e css,ejs,js,json --watch app --ignore feedback.json"
