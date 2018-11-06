@@ -1600,7 +1600,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .googlemap {
         position: relative;
-        padding-bottom: 50%; // This is the aspect ratio
+        padding-bottom: 50%; 
         height: 0;
         overflow: hidden;
     }
@@ -2194,7 +2194,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  }
 
  #speaker-single .page-section.speakers .grid-item.photo:hover img {
-     opacity 0.8;
+     opacity: 0.8;
  }
 
  #speaker-single .bottom-speaker-list .container article {
@@ -2400,6 +2400,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 #schedule .grid {
   padding: 6rem;
+}
+
+#schedule td a {
+  color: white;
 }
 
 /**
