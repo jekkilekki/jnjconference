@@ -3053,7 +3053,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   padding-bottom: 6rem;
 }
 
-#schedule td a {
+#schedule td a,
+.schedule-session a {
   color: white;
 }
 
