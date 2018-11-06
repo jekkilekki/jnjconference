@@ -102,6 +102,11 @@ p {
   box-shadow: 5px 35px 100px rgba(0,0,0,0.7);
 }
 
+.hero-img:hover {
+  cursor: pointer;
+  box-shadow: 5px 35px 120px rgba(0,0,0,0.8);
+}
+
 .intro {
   font-size: 2rem;
   line-height: 3.2rem;
