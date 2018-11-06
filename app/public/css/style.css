@@ -3046,7 +3046,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 #schedule .grid {
-  padding: 0 0 6rem;
+  padding: 0;
+}
+
+#schedule .page-button-container {
+  padding-bottom: 6rem;
+}
+
+#schedule td a {
+  color: white;
 }
 
 /* #speaker-single .grid {
