@@ -30,6 +30,7 @@ app.use( require( './routes/team' ) );
 app.use( require( './routes/privacy' ) );
 app.use( require( './routes/conduct' ) );
 app.use( require( './routes/sponsors' ) );
+app.use( require( './routes/tickets' ) );
 
 
 var server = app.listen( app.get( 'port' ), function() {

@@ -415,6 +415,10 @@ h6 {
   color: #ff1926!important;
 }
 
+.center {
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -3844,6 +3848,98 @@ h4.sponsor-section-title {
 .sponsor-meta h5 {
     text-align: center;
     margin: 0;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Tickets Page
+ * -----------------------------------------------------------------------------
+ */
+#tickets .section-subtitle {
+  text-align: center;
+  margin-top: -1rem;
+}
+
+#tickets .page-section:first-child {
+  padding-bottom: 0;
+}
+
+#tickets .page-section:last-child {
+  padding-top: 0;
+}
+
+#tickets .ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+}
+
+.ticket {
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.14);
+  list-style-type: none;
+  padding-top: 1rem;
+  background: white;
+}
+
+.ticket:hover {
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+}
+
+.ticket div {
+  border-bottom: 1px solid gainsboro;
+  padding: 10%;
+}
+
+.ticket p {
+  margin-bottom: 0;
+}
+
+.ticket div:last-child {
+  border: none;
+}
+
+.ticket .krw {
+  font-size: 1.5rem;
+}
+
+.ticket .ticket-type {
+  color: #004369;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.ticket .ticket-price {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.ticket .benefits,
+.ticket .benefits ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ticket .benefit-title {
+  color: #ff1926;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  /* text-align: left; */
+}
+
+.ticket .benefit-item {
+  padding: 1rem 0;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  list-style-type: none;
+}
+
+.ticket .benefit-item:last-child {
+  border-bottom: none;
+}
+
+.ticket .buy p {
+  margin-bottom: 1rem;
 }
 
 /* -----
