@@ -37,13 +37,13 @@ var server = app.listen( app.get( 'port' ), function() {
 });
 
 // Socket.io stuff to handle chat
-io.attach( server ); // connect to server first
+// io.attach( server ); // connect to server first
 
-io.on( 'connection', function( socket ) {
-    // detect a postMessage event (from socket.emit in chat.js)
-    socket.on( 'postMessage', function( data ) {
-        io.emit( 'updateMessages', data );
-    });
-});
+// io.on( 'connection', function( socket ) {
+//     // detect a postMessage event (from socket.emit in chat.js)
+//     socket.on( 'postMessage', function( data ) {
+//         io.emit( 'updateMessages', data );
+//     });
+// });
 
 reload( server, app ); // Reload.JS to auto refresh our page on project changes (required above)

@@ -1481,6 +1481,11 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   font-size: 0.9rem;
 }
 
+#home .schedule .info {
+  color: white;
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.14);
+}
+
 .conference-schedule {
   color: white;
   /* padding-bottom: 6rem; */
@@ -1605,6 +1610,21 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .buzz {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.buzz-title {
+  text-align: center;
+}
+
+.buzz-title img {
+  display: inline;
+}
+
+.buzz-title span {
+  color: #004369; 
+  font-size: 1.4rem; 
+  position: relative; 
+  top: -0.25rem;
 }
 
 .buzz-list {
@@ -3532,6 +3552,7 @@ h2.accomodation {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
+  margin-bottom: 2rem;
 /*   min-height: 300px; */
 }
 
@@ -3719,6 +3740,10 @@ li.sponsor-list-item.hosting-parter {
 .sponsor-logo:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
+
+.sponsor-logo img {
+  height: 100px;
 }
 
 @media screen and (min-width: 26rem) {

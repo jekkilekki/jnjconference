@@ -40,19 +40,6 @@
       "media": [""]
     },
     {
-      "name": "Tacocino",
-      "description": "A Mexican taco restaurant located in Shinsikaji near Jeonju University. Specializes in tacos, quesadillas, burritos, and fajitas.",
-      "address": "전북 전주시 완산구 효자동3가 1534-3",
-      "phone": "063-227-8558",
-      "map": "http://naver.me/5vAEJdag",
-      "website": "https://www.facebook.com/Tacocina-%ED%83%80%EC%BD%94%EC%94%A8%EB%82%98-230582780692767/",
-      "level": "silver",
-      "amount": "100,000",
-      "gift": "vouchers",
-      "logo": "tacocina-logo.png",
-      "media": [""]
-    },
-    {
       "name": "Lemon Tree Cafe",
       "description": "A Korean coffee shop located down on the road between Gaeksa and Hanok Village.",
       "address": "전북 전주시 완산구 전라감영로 75",
@@ -66,45 +53,6 @@
       "media": [""]
     },
     {
-      "name": "Cambridge University Press",
-      "description": "Cambridge University Press dates from 1534 and is part of the University of Cambridge. Our mission is to unlock people's potential with the best learning and research solutions.",
-      "address": "",
-      "phone": "",
-      "map": "",
-      "website": "",
-      "level": "silver",
-      "amount": "120,000",
-      "gift": "books",
-      "logo": "cambridge-logo.png",
-      "media": [""]
-    },
-    {
-      "name": "The Liter Coffee",
-      "description": "A cheaper, more affordable coffee, up to 1 liter in capacity.",
-      "address": "전주시 완산구 유연로308",
-      "phone": "063-222-5478",
-      "map": "http://naver.me/5cH9nbQC",
-      "website": "http://www.theliter.co.kr/",
-      "level": "bronze",
-      "amount": "56,000",
-      "gift": "vouchers",
-      "logo": "liter-logo.png",
-      "media": [""]
-    },
-    {
-      "name": "Yega Restaurant",
-      "description": "A traditional style Korean restaurant located at the base of Moak Mountain and specializing in healthy Korean food, particularly Chungkukjang.",
-      "address": "전북 완주군 구이면 모악산길 112",
-      "phone": "",
-      "map": "http://naver.me/5nM2hnF3",
-      "website": "",
-      "level": "bronze",
-      "amount": "50,000",
-      "gift": "donation",
-      "logo": "yega-logo.png",
-      "media": [""]
-    },
-    {
       "name": "English Garden",
       "description": "A unique Patchwork Studio with bright interior decor, artwork, old Korean sewing machines, and a large collection of (even English) books.",
       "address": "전주시 완산구 화산천변 3길 4-3",
@@ -115,32 +63,6 @@
       "amount": "50,000",
       "gift": "donation",
       "logo": "english-garden-logo.png",
-      "media": [""]
-    },
-    {
-      "name": "March Rabbit",
-      "description": "A salad can even qualify as a filling meal.",
-      "address": "전라북도 전주시 완산구 홍산남로 30",
-      "phone": "063-226-1974",
-      "map": "http://naver.me/G6hzRKmr",
-      "website": "http://marchrabbit.co.kr/",
-      "level": "partner",
-      "amount": "30,000",
-      "gift": "vouchers",
-      "logo": "march-rabbit-logo.png",
-      "media": [""]
-    },
-    {
-      "name": "Solasta Yoga",
-      "description": "A non-profit yoga club in Jeonju, South Korea offering yoga asana, pranayama, meditation and a compassionate community in a supportive and beautiful space.",
-      "address": "완산구 홍산남로 29-15 휴본빌딩 3층",
-      "phone": "",
-      "map": "http://naver.me/xeYZFhCk",
-      "website": "https://www.facebook.com/groups/solastayoga/",
-      "level": "partner",
-      "amount": "20,000",
-      "gift": "FREE sessions",
-      "logo": "solasta-logo.png",
       "media": [""]
     }
   ]
