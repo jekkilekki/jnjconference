@@ -3874,10 +3874,13 @@ h4.sponsor-section-title {
   grid-gap: 2rem;
 }
 
+#tickets ul {
+  list-style: none;
+}
+
 .ticket {
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
   box-shadow: 0px 0px 4px rgba(0,0,0,0.14);
-  list-style-type: none;
   padding-top: 1rem;
   background: white;
 }
@@ -3903,6 +3906,15 @@ h4.sponsor-section-title {
   font-size: 1.5rem;
 }
 
+.ticket .fineprint {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.ticket .fineprint .krw {
+  font-size: 0.7rem;
+}
+
 .ticket .ticket-type {
   color: #004369;
   font-size: 2rem;
@@ -3914,24 +3926,52 @@ h4.sponsor-section-title {
   font-weight: 500;
 }
 
+.ticket .benefits ul {
+  display: none;
+}
+
 .ticket .benefits,
 .ticket .benefits ul {
   margin: 0;
   padding: 0;
+  background-color: rgba(255, 204, 0, 0.1);
 }
 
 .ticket .benefit-title {
-  color: #ff1926;
+  background: white;
+  font-weight: 700;
   padding: 1rem;
   border-bottom: 1px solid #eee;
+  transition: all 0.3s;
   /* text-align: left; */
 }
 
+.ticket .benefit-title:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 4px rgba(255, 204, 0, 0.8);
+}
+
+.ticket .benefit-title .fa {
+  transform: rotate(-90deg);
+}
+
+.ticket .benefit-title:hover .fa {
+  transform: rotate(0deg);
+}
+
+.ticket .benefit-title.active {
+  background: #ffcc00;
+}
+
 .ticket .benefit-item {
-  padding: 1rem 0;
+  padding: 1rem;
   margin: 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eaeaea;
   list-style-type: none;
+}
+
+.ticket .benefit-item.bonus {
+  background-color: rgba(255,204,0,0.3);
 }
 
 .ticket .benefit-item:last-child {

@@ -7,14 +7,7 @@
         <% include partials/template/header-menu.ejs %>
 
         <main class="site-content">
-          <!-- Inspired by https://thenextweb.com/conference/tickets -->
-          <!-- 
-            Files updated:
-            style.css
-            routes/tickets.js
-            views/tickets.ejs
-            app.js
-          -->  
+          <!-- Inspired by https://thenextweb.com/conference/tickets --> 
           <% include partials/content/hero.ejs %>
 
             <section class="page-section">
@@ -28,71 +21,95 @@
             <section class="page-section red-dot">
               <div class="container">
                 <ul class="ticket-grid">
-                  <li class="ticket center">
-                    <div class="price">
-                      <p class="ticket-type">KOTESOL Member</p>
-                      <p class="ticket-price"><span class="krw">₩</span>5,000</p>
-                    </div>
-                    <div class="explanation">
-                      <p>Access to everything, blah, blah.</p>
-                    </div>
-                    <div class="benefits">
-                      <p class="benefit-title">The benefits</p>
-                      <ul>
-                        <li class="benefit-item">Network with 50 attendees</li>
-                        <li class="benefit-item">Access 7 amazing talks</li>
-                        <li class="benefit-item">After party</li>
-                      </ul>
-                    </div>
-                    <div class="buy">
-                      <p class="center">Contact us for details</p>
-                      <p class="center">
-                        <a class="page-button button" href="mailto:jnj.presenters@gmail.com">Yes! I want this!</a>
-                      </p>
-                    </div>
-                  </li>
-                  <li class="ticket">
-                    <div class="price">
-                      <h2>Non-Member</h2>
-                      <h2><span class="krw">₩</span>10,000</h2>
-                    </div>
-                    <div class="explanation">
-                      <p>Access to everything, blah, blah.</p>
-                    </div>
-                    <div class="benefits">
-                      <ul>
-                        <li class="benefit-item">Network with 50 attendees</li>
-                        <li class="benefit-item">Access 7 amazing talks</li>
-                        <li class="benefit-item">After party</li>
-                      </ul>
-                    </div>
-                    <div class="buy">
-                      <p class="center">Contact us for details</p>
-                      <p class="center">
-                        <a class="page-button button" href="mailto:jnj.presenters@gmail.com">Yes! I want this!</a>
-                      </p>
+                  <li class="center">
+                    <div class="ticket">
+                      <div class="price">
+                        <p class="ticket-type">Non-Member</p>
+                        <p class="ticket-price"><span class="krw">₩</span>10,000</p>
+                      </div>
+                      <div class="explanation">
+                        <p>Full access to the conference, networking opportunities, and the after party.</p>
+                      </div>
+                      <div class="benefits">
+                        <p class="benefit-title">Full benefits <i class="fa fa-arrow-down"></i></p>
+                        <ul>
+                          <li class="benefit-item">Network with conference attendees</li>
+                          <li class="benefit-item">Access to 7 amazing <a href="/speakers">talks</a> &amp; presenters</li>
+                          <li class="benefit-item">After party in <a href="/location#shinsikaji">Shinsikaji</a></li>
+                        </ul>
+                      </div>
+                      <div class="buy">
+                        <p class="center">Contact us for details</p>
+                        <p class="center">
+                          <a class="page-button button" href="mailto:jnj.presenters@gmail.com">Yes! I want this!</a>
+                        </p>
+                      </div>
                     </div>
                   </li>
-                  <li class="ticket">
-                    <div class="price">
-                      <h2>New Membership<span class="fineprint">*<span class="krw">₩</span>50,000/year</span></h2>
-                      <h2 class="free">FREE</h2>
+                  <li class="center">
+                    <div class="ticket">
+                      <div class="price">
+                        <p class="ticket-type">KOTESOL Member</p>
+                        <p class="ticket-price"><span class="krw">₩</span>5,000</p>
+                      </div>
+                      <div class="explanation">
+                        <p>Full access to the conference, networking opportunities, the after party, as well as all KOTESOL <a href="https://koreatesol.org/content/member-benefits">membership benefits</a>.</p>
+                      </div>
+                      <div class="benefits">
+                        <p class="benefit-title">Full benefits <i class="fa fa-arrow-down"></i></p>
+                        <ul>
+                          <li class="benefit-item">Network with conference attendees</li>
+                          <li class="benefit-item">Access to 7 amazing <a href="/speakers">talks</a> &amp; presenters</li><li class="benefit-item">After party in <a href="/location#shinsikaji">Shinsikaji</a></li>
+                          <li class="benefit-item">Member's discount to this &amp; other nationwide KOTESOL events</li>
+                          <li class="benefit-item">Access to 3 KOTESOL <a href="https://koreatesol.org/publications">publications</a> &amp; the KOTESOL <a href="https://koreatesol.org/video">video library</a></li>
+                          <li class="benefit-item">Submit your work for <a href="https://koreatesol.org/publications">publication</a></li>
+                          <li class="benefit-item">Apply for a KOTESOL <a href="https://koreatesol.org/research-comm">Research</a>, travel, or conference <a href="http://koreatesol.org/ioc">grant</a></li>
+                          <li class="benefit-item">Apply for <a href="https://koreatesol.org/TOTY">Teacher of the Year Award</a></li>
+                          <li class="benefit-item">Apply to <em>present</em> at KOTESOL's National &amp; International Conferences</li>
+                          <li class="benefit-item">Show your membership card for special <a href="https://koreatesol.org/content/member-discounts">discounts</a> around the country</li>
+                          <li class="benefit-item">And <a href="https://koreatesol.org/content/member-benefits">many more</a>!</li>
+                        </ul>
+                      </div>
+                      <div class="buy">
+                        <p class="center">Contact us for details</p>
+                        <p class="center">
+                          <a class="page-button button" href="mailto:jnj.presenters@gmail.com">Yes! I want this!</a>
+                        </p>
+                      </div>
                     </div>
-                    <div class="explanation">
-                      <p>Access to everything, blah, blah.</p>
-                    </div>
-                    <div class="benefits">
-                      <ul>
-                        <li class="benefit-item">Network with 50 attendees</li>
-                        <li class="benefit-item">Access 7 amazing talks</li>
-                        <li class="benefit-item">After party</li>
-                      </ul>
-                    </div>
-                    <div class="buy">
-                      <p class="center">Contact us for details</p>
-                      <p class="center">
-                        <a class="page-button button" href="mailto:jnj.presenters@gmail.com">Yes! I want this!</a>
-                      </p>
+                  </li>
+                  <li class="center">
+                    <div class="ticket">
+                      <div class="price">
+                        <p class="ticket-type">New Membership*</p>
+                        <p class="ticket-price free">FREE</p>
+                        <p class="fineprint">*<span class="krw">₩</span>50,000/year</p>
+                      </div>
+                      <div class="explanation">
+                        <p>Full access to the conference, networking opportunities, the after party, as well as all KOTESOL <a href="https://koreatesol.org/content/member-benefits">membership benefits</a> - <em>and</em> a nifty printed <a href="">conference booklet.</a></p>
+                      </div>
+                      <div class="benefits">
+                        <p class="benefit-title">Full benefits <i class="fa fa-arrow-down"></i></p>
+                        <ul>
+                          <li class="benefit-item">Network with conference attendees</li>
+                          <li class="benefit-item">Access to 7 amazing <a href="/speakers">talks</a> &amp; presenters</li><li class="benefit-item">After party in <a href="/location#shinsikaji">Shinsikaji</a></li>
+                          <li class="benefit-item">Member's discount to this &amp; other nationwide KOTESOL events</li>
+                          <li class="benefit-item bonus">A <em>printed</em> conference booklet</li>                          
+                          <li class="benefit-item">Access to 3 KOTESOL <a href="https://koreatesol.org/publications">publications</a> &amp; the KOTESOL <a href="https://koreatesol.org/video">video library</a></li>
+                          <li class="benefit-item">Submit your work for <a href="https://koreatesol.org/publications">publication</a></li>
+                          <li class="benefit-item">Apply for a KOTESOL <a href="https://koreatesol.org/research-comm">Research</a>, travel, or conference <a href="http://koreatesol.org/ioc">grant</a></li>
+                          <li class="benefit-item">Apply for <a href="https://koreatesol.org/TOTY">Teacher of the Year Award</a></li>
+                          <li class="benefit-item">Apply to <em>present</em> at KOTESOL's National &amp; International Conferences</li>
+                          <li class="benefit-item">Show your membership card for special <a href="https://koreatesol.org/content/member-discounts">discounts</a> around the country</li>
+                          <li class="benefit-item">And <a href="https://koreatesol.org/content/member-benefits">many more</a>!</li>
+                        </ul>
+                      </div>
+                      <div class="buy">
+                        <p class="center">Contact us for details</p>
+                        <p class="center">
+                          <a class="page-button button" href="mailto:jnj.presenters@gmail.com">Yes! I want this!</a>
+                        </p>
+                      </div>
                     </div>
                   </li>
                 </ul>
