@@ -1,0 +1,41 @@
+//- Page: Index (Home page)
+extends layout/index
+block hero
+  include partials/hero
+  include partials/whatis
+
+block content
+  section.site-header
+  //- .hero
+  .flex-it.container
+    .left-half
+      h2.page-title Join us at the 2019 KOTESOL National Conference
+      h3.page-subtitle
+        | May 25, 2019, 
+        a(href='/location') Jeonju
+      p.page-note Pre-registration opens soon!
+      a(href='button btn') Get notif
+    .right-half
+  section.page-section.whatis
+
+  section.page-section.keypts
+    h1 KeyPts
+    include partials/keypts
+
+  section.page-section.speakers
+    include partials/speaker-grid 
+
+  section.page-section.schedule.parallax 
+    include partials/schedule-table 
+
+  section.page-section.buzz 
+    include partials/buzz-grid
+  
+  section.page-section.gallery 
+    include partials/gallery-grid
+
+  section.page-section.sponsors 
+    include partials/sponsors-list 
+
+  section.conference-map
+    include partials/map 
