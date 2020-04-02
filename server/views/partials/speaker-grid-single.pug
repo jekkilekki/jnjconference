@@ -1,0 +1,12 @@
+a.grid-item.photo(href=`/speakers/${speaker.shortname}`)
+	img(src=`/img/people/${speaker.img}`)
+	h4.speaker-name=speaker.name
+
+.speaker-meta
+	h4.speaker-name
+		a(href=`/speakers/${speaker.shortname}`)=speaker.name
+	p.speaker-affiliation=speaker.affiliation
+	p.speaker-session
+		strong Talk / 
+		a(href=`/speakers/${speaker.shortname}`)=speaker.title
+		span=speaker.subtitle

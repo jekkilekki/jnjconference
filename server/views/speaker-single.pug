@@ -6,9 +6,11 @@ block content
     .container
       h2.page-section-title= speaker.name
       p.section-subtitle.center= speaker.affiliation
+      .center.venue-pdf
+        a.button(href='/speakers') View All Speakers
   section.page-section
     .container.small
-      h2.section-title Meet our Speakers
+      //- h2.section-title Meet our Speakers
       // http://davist11.github.io/css-diamond-grid/#
       article.speaker
         .speaker-info-section
@@ -16,16 +18,60 @@ block content
             .speaker-photo(style=`background-image: url('/img/people/${speaker.img}')`)
             .attendee-img-shadow
             .attendee-img-shadow-yellow
+            if speaker.contact
+              .speaker-contact
+                if speaker.website
+                  a.speaker-website(href=`${speaker.website}`)
+                    i.fas.fa-globe
+                    span Website
+                if speaker.email
+                  a.speaker-email(href=`mailto:${speaker.email}`)
+                    i.fas.fa-envelope
+                    span Email
           .speaker-meta
-            p.speaker-name
-              a(href=`/speakers/${speaker.shortname}`)=speaker.name
+            h3.speaker-name=speaker.name
+              //- a(href=`/speakers/${speaker.shortname}`)=speaker.name
             p.speaker-affiliation=speaker.affiliation
             p.speaker-session
               strong Talk / 
+              //- !=speaker.title
               a(href=`/speakers/${speaker.shortname}`)=speaker.title
+              if speaker.subtitle
+                span=speaker.subtitle
+              if speaker.name1
+                p.co-names Presented by
+                  span=speaker.name1
+                  span=speaker.name2
+                  span=speaker.name3
             p.speaker-abstract
               !=speaker.abstract
             .speaker-info
-              p.speaker-bio-title About #{speaker.nickname}
+              h4.speaker-bio-title About #{speaker.nickname}
               p.speaker-bio
                 !=speaker.bio
+            if speaker.img1
+              hr
+              .co-presenters.single
+                .speaker-info
+                  .co-photo(style=`background: url(/img/people/${speaker.img1})`)
+                  h4.speaker-bio-title About #{speaker.name1}
+                  small=speaker.aff1
+                  p.speaker-bio
+                    !=speaker.bio1
+                if speaker.img2
+                  .speaker-info
+                    .co-photo(style=`background: url(/img/people/${speaker.img2})`)
+                    h4.speaker-bio-title About #{speaker.name2}
+                    small=speaker.aff2
+                    p.speaker-bio
+                      !=speaker.bio2
+                if speaker.img3
+                  .speaker-info
+                    .co-photo(style=`background: url(/img/people/${speaker.img3})`)
+                    h4.speaker-bio-title About #{speaker.name3}
+                    small=speaker.aff3
+                    p.speaker-bio
+                      !=speaker.bio3
+
+      .page-button-container
+        a.page-button(src='/speakers') View All Speakers

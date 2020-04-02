@@ -11,6 +11,7 @@ module.exports = (param) => {
       promises.push(speakerService.getPlenaryDetails());
       promises.push(speakerService.getSpeakersShortList());
       promises.push(speakerService.getSpeakersFullList());
+      promises.push(speakerService.getFeaturedShortList());
 
       const results = await Promise.all(promises);
 
@@ -19,7 +20,8 @@ module.exports = (param) => {
         pageId: 'speakers',
         plenary: results[0],
         speakerslist: results[1],
-        speakersfull: results[2]
+        speakersfull: results[2],
+        featured: results[3],
       });
     } catch(err) {
       return next(err);
@@ -30,6 +32,27 @@ module.exports = (param) => {
     try {
       const promises = [];
       promises.push(speakerService.getPlenarySpeaker(req.params.name));
+
+      const results = await Promise.all(promises);
+
+      if( !results[0] ) {
+        return next();
+      }
+
+      return res.render( 'speaker-single', {
+        page: req.params.name,
+        pageId: 'speaker-single',
+        speaker: results[0]
+      });
+    } catch(err) {
+      return next(err);
+    }
+  });
+
+  router.get( '/featured/:name', async (req, res, next) => {
+    try {
+      const promises = [];
+      promises.push(speakerService.getFeaturedSpeaker(req.params.name));
 
       const results = await Promise.all(promises);
 

@@ -3,13 +3,15 @@ section.container
   //- img.plenary-img.speaker(src='/img/people/jackrichards.png')
   each speaker in plenary
     .grid-it-2
-      figure
-        img.plenary-img.speaker(src=`${speaker.plenaryimg}`)
+      a.plenary-img(style=`background-image: url('/img/people/${speaker.img}')` href=`/speakers/plenary/${speaker.shortname}`)
+        //- img.plenary-img.speaker(src=`/img/people/${speaker.plenaryimg}`)
       .plenary-info
         hgroup
-          a(href=href=`/speakers/plenary/${speaker.shortname}`)
+          a(href=`/speakers/plenary/${speaker.shortname}`)
             h3.plenary-name=speaker.name
           h4.plenary-topic=speaker.title
+          if speaker.subtitle
+            p.speaker-subtitle=speaker.subtitle
         .abstract 
           //- h5.abstract Abstract
           p

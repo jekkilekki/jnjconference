@@ -3,18 +3,41 @@ extends layout/index
 block hero
   //- include partials/hero
   figure.hero
-    img(src='/design/web/kotesol-natcon-2019-cloud-wide.jpg')
+    img(src='/img/bg/brush-stroke-bg-dk.png')
 
 block content
-  section.site-header
+  //- section.site-header
     //- .hero
   .conference-info
     .container
       h3.page-subtitle
-        | May 25, 2019, 
-        a(href='/location') Jeonju
-      img.conference-logo(src='/design/web/kotesol-natcon-2019-logo.png')
-      //- h2.conference-title Join us at the 2019 KOTESOL National Conference!
+        img.title-logo(src='/img/sponsors/kotesol-logo.png')
+        | National Conference 2020 
+        a(href='https://live.kotesolconf.com') ONLINE
+      //- img.conference-logo(src='/design/web/kotesol-natcon-2019-logo.png')
+      //- div(style="display:flex; justify-content: center")
+      //-   div(style="background-color: #3eb882; width: 50px; height: 50px")
+      //-   div(style="background-color: #33ca7f; width: 50px; height: 50px")
+      //-   div(style="background-color: #7dcfb6; width: 50px; height: 50px")
+      //-   div(style="background-color: #ece4b7; width: 50px; height: 50px")
+      //-   div(style="background-color: #fbd1a2; width: 50px; height: 50px")
+      //-   div(style="background-color: #fc9f5b; width: 50px; height: 50px")
+      //-   div(style="background-color: #ef6461; width: 50px; height: 50px")
+      //-   div(style="background-color: #e85d75; width: 50px; height: 50px")
+      //-   div(style="background-color: #ef798a; width: 50px; height: 50px")
+      //-   div(style="background-color: #c98bb9; width: 50px; height: 50px")
+      //-   div(style="background-color: #674ea0; width: 50px; height: 50px")
+      //-   div(style="background-color: #35485e; width: 50px; height: 50px")
+      //-   div(style="background-color: #0d153a; width: 50px; height: 50px")
+
+      hgroup.conference-headline
+        h1.conference-title 
+          span.be Be 
+          span.the the 
+          span.change Change
+        h2.conference-subtitle Creativity, Community, &amp; Collegiality in EFL
+
+      //- h3.conference-invite Join us at the 2020 KOTESOL National Conference!
       //- .countdown
       //-   p 137
       //-     span days
@@ -32,32 +55,42 @@ block content
             //- Try to get these responsive with help from: https://codepen.io/jonespen/pen/tLhdy
             svg.pie-plate(width='100', height='100', viewBox="0 0 100 100", preserveAspectRatio="xMinYMin meet")
               circle.pie(r='50', cx='50', cy='50')
+              circle.pie2(r='40', cx='50', cy='50')
           li#hours
             .number 00
             .label Hours
-            svg.pie-plate(width='100', height='100', preserveAspectRatio="xMinYMin meet")
+            svg.pie-plate(width='100', height='100', viewBox="0 0 100 100", preserveAspectRatio="xMinYMin meet")
               circle.pie(r='50', cx='50', cy='50')
+              circle.pie2(r='40', cx='50', cy='50')
           li#minutes
             .number 00
             .label Minutes
-            svg.pie-plate(width='100', height='100')
-              circle.pie(r='50', cx='50', cy='50', stroke-dasharray='10')
+            svg.pie-plate(width='100', height='100', viewBox="0 0 100 100", preserveAspectRatio="xMinYMin meet")
+              circle.pie(r='50', cx='50', cy='50')
+              circle.pie2(r='40', cx='50', cy='50')
           li#seconds
             .number 00
             .label Seconds
-            svg.pie-plate(width='100', height='100')
+            svg.pie-plate(width='100', height='100', viewBox="0 0 100 100", preserveAspectRatio="xMinYMin meet")
               circle.pie(r='50', cx='50', cy='50')
+              circle.pie2(r='40', cx='50', cy='50')
 
-      p.page-note 
-        | Pre-registration opens soon!
-        br 
-        | Interested in presenting? 
-        a(href='https://docs.google.com/forms/d/e/1FAIpQLScKREjbbox6ZQDAKw7s14g8GuPgXISUMHVI1RGYNuWUOsEYRg/viewform?vc=0&c=0&w=1') Submit a Talk
-      p.presented-by 
-        | Presented by
-        a(href="https://koreatesol.org")
-          img(src='/img/kotesol-logo.png')
-  include partials/whatis
+      //- p.page-note 
+      //-   | Pre-registration opens soon!
+        //- br 
+        //- | Interested in presenting? 
+        //- a(href='https://docs.google.com/forms/d/e/1FAIpQLScKREjbbox6ZQDAKw7s14g8GuPgXISUMHVI1RGYNuWUOsEYRg/viewform?vc=0&c=0&w=1') Submit a Talk
+      //- p.presented-by 
+      //-   | Presented by
+      //-   a(href="https://koreatesol.org")
+      //-     img(src='/img/sponsors/kotesol-logo.png')
+      a.button.button-big(href='https://live.kotesolconf.com') Go Live
+      a.button.button-big.inverse(href='https://kotesolnatcon2020.slack.com/join/shared_invite/zt-d1c23ble-Z4hX2bxqJqqL~v0u0pa8Zg') 
+        i.fab.fa-slack
+        | &nbsp;Chat
+  
+  section.page-section.whatis
+    include partials/whatis
 
   section.page-section.keypts
     include partials/keypts
@@ -65,14 +98,14 @@ block content
   section.pages-section.plenary
     include partials/plenary
 
-  section.call 
-    include partials/call
+  //- section.call 
+  //-   include partials/call
 
-  //- section.page-section.speakers
-  //-   include partials/speaker-grid 
+  section.page-section.speakers
+    include partials/speaker-grid 
 
-  section.page-section.schedule.parallax 
-    include partials/schedule-table-outline
+  //- section.page-section.schedule.parallax 
+  //-   include partials/schedule-table-outline
 
   //- section.page-section.schedule.parallax 
   //-   include partials/schedule-table 
@@ -92,5 +125,5 @@ block content
   //- section.page-section.sponsors-call 
   //-   include partials/call-sponsors
 
-  section.conference-map
-    include partials/map 
+  //- section.conference-map
+  //-   include partials/map 

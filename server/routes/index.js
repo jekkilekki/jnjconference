@@ -11,6 +11,7 @@ const teamRoute = require( './team' );
 const conductRoute = require( './conduct' );
 const privacyRoute = require( './privacy' );
 const chatRoute = require( './chat' );
+const faqsRoute = require( './faqs' );
 
 module.exports = (param) => {
 
@@ -22,6 +23,7 @@ module.exports = (param) => {
       promises.push(speakerService.getPlenaryDetails());
       promises.push(speakerService.getSpeakersShortList());
       promises.push(speakerService.getSpeakersFullList());
+      promises.push(speakerService.getFeaturedShortList());
 
       const results = await Promise.all(promises);
 
@@ -30,7 +32,8 @@ module.exports = (param) => {
         pageId: 'home',
         plenary: results[0],
         speakerslist: results[1],
-        speakersfull: results[2]
+        speakersfull: results[2],
+        featured: results[3],
       });
     } catch(err) {
       return next(err);
@@ -47,6 +50,7 @@ module.exports = (param) => {
   router.use( '/code-of-conduct', conductRoute(param) );
   router.use( '/privacy', privacyRoute(param) );
   router.use( '/chat', chatRoute(param) );
+  router.use( '/faqs', faqsRoute(param) );
 
   return router;
 }

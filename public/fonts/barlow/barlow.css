@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Barlow';
+	font-weight: 22 188;
+	font-style: normal;
+	font-stretch: 300 500;
+	src: url('BarlowGX.ttf') format('truetype');
+	font-display: swap;
+}

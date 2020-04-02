@@ -1,0 +1,42 @@
+a.grid-item.photo(href=`/speakers/featured/${speaker.shortname}`)
+	//- if speaker.img1
+	//- 	ul.circle-thirds
+	//- 		li.third1
+	//- 			.third-photo(style=`background: url(/img/people/${speaker.img1})`)
+	//- 		li.third2
+	//- 			.third-photo(style=`background: url(/img/people/${speaker.img2})`)
+	//- 		li.third3
+	//- 			.third-photo(style=`background: url(/img/people/${speaker.img3})`)
+	//- else
+	img(src=`/img/people/${speaker.img}`)
+	h4.speaker-name=speaker.name
+
+.speaker-meta
+	p.featured-ribbon Featured
+	h4.speaker-name
+		a(href=`/speakers/featured/${speaker.shortname}`)=speaker.name
+	p.speaker-affiliation=speaker.affiliation
+	p.speaker-session
+		strong Talk / 
+		a(href=`/speakers/featured/${speaker.shortname}`)=speaker.title
+		span=speaker.subtitle
+	if speaker.img1
+		.co-presenters
+			.co1
+				.co-photo(style=`background: url(/img/people/${speaker.img1})`)
+				.co-meta
+					h6.co-name=speaker.name1
+					small.co-aff=speaker.aff1
+			if speaker.img2
+				.co2
+					.co-photo(style=`background: url(/img/people/${speaker.img2})`)
+					.co-meta
+						h6.co-name=speaker.name2
+						small.co-aff=speaker.aff2
+			if speaker.img3
+				.co3
+					.co-photo(style=`background: url(/img/people/${speaker.img3})`)
+						//- img(src=`/img/people/${speaker.img3}`)
+					.co-meta
+						h6.co-name=speaker.name3
+						small.co-aff=speaker.aff3

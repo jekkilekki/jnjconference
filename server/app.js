@@ -1,6 +1,7 @@
 const express = require( 'express' );
 const http = require('http');
 const reload = require( 'reload' );
+// const php = require( 'node-php' ); // PHP for WordPress?
 const path = require( 'path' ); // from Node.js
 const createError = require( 'http-errors' );
 const bodyParser = require( 'body-parser' );
@@ -62,6 +63,9 @@ app.use( '/', routes({
   feedbackService,
   dataService
 }) );
+// For WordPress?
+// app.use( '/', php.cgi( '/live' ) );
+
 app.use(( req, res, next ) => {
   return next( createError( 404, 'File not found' ) );
 });
