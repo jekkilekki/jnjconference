@@ -5,12 +5,12 @@ const reload = require( 'reload' );
 const path = require( 'path' ); // from Node.js
 const createError = require( 'http-errors' );
 const bodyParser = require( 'body-parser' );
-const routes = require( './routes' );
-const configs = require( './config' );
+const routes = require( './server/routes' );
+const configs = require( './server/config' );
 // const db = require('./lib/db');
-const SpeakerService = require( './services/SpeakerService' );
-const FeedbackService = require( './services/FeedbackService' );
-const DataService = require( './services/DataService' );
+const SpeakerService = require( './server/services/SpeakerService' );
+const FeedbackService = require( './server/services/FeedbackService' );
+const DataService = require( './server/services/DataService' );
 const app = express();
 
 const config = configs[app.get('env')];
@@ -25,7 +25,7 @@ app.set( 'view engine', 'pug' );
 if ( app.get( 'env' ) === 'development' ) {
   app.locals.pretty = true; // make non-minimized HTML from Pug
 }
-app.set( 'views', path.join( __dirname, './views' ) );
+app.set( 'views', path.join( __dirname, './server/views' ) );
 
 
 app.locals.siteTitle = config.sitename;
@@ -115,6 +115,6 @@ app.listen( app.get( 'port' ), function() {
   console.log( 'Listening on port ' + app.get( 'port' ) ); 
 });
 
-// reload( app );
+reload( app );
 
 module.export = app;
