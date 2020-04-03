@@ -24,6 +24,10 @@ block content
                   a.speaker-website(href=`${speaker.website}`)
                     i.fas.fa-globe
                     span Website
+                if speaker.donate
+                  a.speaker-donate(href=`${speaker.donate}`)
+                    i.fas.fa-donate
+                    span Donate
                 if speaker.email
                   a.speaker-email(href=`mailto:${speaker.email}`)
                     i.fas.fa-envelope

@@ -140,6 +140,7 @@ class SpeakerService {
       media: speaker.media,
       contact: speaker.contact ? speaker.contact : '',
       website: speaker.website ? speaker.website : '',
+      donate: speaker.donate ? speaker.donate : '',
       email: speaker.email ? speaker.email : '',
       phone: speaker.phone
     }
@@ -209,6 +210,7 @@ class SpeakerService {
       img3: speaker.img3,
       contact: speaker.contact ? speaker.contact : '',
       website: speaker.website ? speaker.website : '',
+      donate: speaker.donate ? speaker.donate : '',
       email: speaker.email ? speaker.email : '',
     };
   }

@@ -7,7 +7,7 @@ const createError = require( 'http-errors' );
 const bodyParser = require( 'body-parser' );
 const routes = require( './routes' );
 const configs = require( './config' );
-const db = require('./lib/db');
+// const db = require('./lib/db');
 const SpeakerService = require( './services/SpeakerService' );
 const FeedbackService = require( './services/FeedbackService' );
 const DataService = require( './services/DataService' );
@@ -90,18 +90,18 @@ const server = http.createServer(app);
 //     console.error(err);
 //   });
 
-const MongoClient = require('mongodb').MongoClient;
+// const MongoClient = require('mongodb').MongoClient;
 
-const uri = 'mongodb+srv://dbUser:tjtU0TONeanmFoMM@cluster0-9emqk.gcp.mongodb.net/test?retryWrites=true';
-db.connect( uri, function(err, client) {
-  if(err) {
-    console.log('Error occurred while connecting to MongoDB Atlas...\n', err);
-  }
-  console.log('Connected to MongoDB Atlas...\n');
-  const collection = client.db('test').collection('users');
-  //perform actions on the collection object
-  client.close();
-});
+// const uri = 'mongodb+srv://dbUser:tjtU0TONeanmFoMM@cluster0-9emqk.gcp.mongodb.net/test?retryWrites=true';
+// db.connect( uri, function(err, client) {
+//   if(err) {
+//     console.log('Error occurred while connecting to MongoDB Atlas...\n', err);
+//   }
+//   console.log('Connected to MongoDB Atlas...\n');
+//   const collection = client.db('test').collection('users');
+//   //perform actions on the collection object
+//   client.close();
+// });
 
 server.on('listening', () => {
   const addr = server.address();
@@ -115,6 +115,6 @@ app.listen( app.get( 'port' ), function() {
   console.log( 'Listening on port ' + app.get( 'port' ) ); 
 });
 
-reload( app );
+// reload( app );
 
 module.export = app;

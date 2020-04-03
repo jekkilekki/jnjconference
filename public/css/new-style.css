@@ -2424,6 +2424,7 @@ header.page-section .container {
 .speaker-contact a {
   color: #101025;
   opacity: 0.7;
+  display: block;
 }
 
 .speaker-contact a span {
@@ -2431,6 +2432,11 @@ header.page-section .container {
   position: relative;
   top: -3px;
   left: 0.5rem;
+}
+
+.speaker-contact a:hover {
+  border: none;
+  color: rgb(0, 120, 50);
 }
 
 .speaker-meta .speaker-affiliation {
@@ -3022,7 +3028,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     text-align: left;
   }
 
-  .co-photo {
+  #home .co-photo {
     float: left;
     margin-right: 0.5rem;
     width: 40px;
@@ -3038,6 +3044,16 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   .speakers .grid.featured-grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 46rem) {
+  #speaker-single .co-photo {
+    position: static!important;
+    float: left;
+    margin-right: 1rem;
+    width: 60px;
+    height: 60px;
   }
 }
 
