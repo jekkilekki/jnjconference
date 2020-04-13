@@ -178,7 +178,7 @@ $( document ).ready( function() {
 var winHeight = $(document).height();
 var winWidth = $(document).width();
 var thisYear = new Date();
-var thisChristmas = thisYear.getFullYear() + "/04/25 10:00:00";
+var thisChristmas = thisYear.getFullYear() + "/04/25 10:45:00";
 var christmas = new Date( thisChristmas ),
     days, hours, mins, secs;
 

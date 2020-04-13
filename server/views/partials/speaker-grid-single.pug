@@ -3,10 +3,23 @@ a.grid-item.photo(href=`/speakers/${speaker.shortname}`)
 	h4.speaker-name=speaker.name
 
 .speaker-meta
+	small.featured-ribbon(class=speaker.room)= speaker.room
+	if speaker.coPresenterImg
+		div.co-photo.coPresenter(style=`background: url('/img/people/${speaker.coPresenterImg}')`)
 	h4.speaker-name
 		a(href=`/speakers/${speaker.shortname}`)=speaker.name
 	p.speaker-affiliation=speaker.affiliation
+	if speaker.coPresenter
+		p.speaker-name 
+			span with 
+			!=speaker.coPresenter
+		p.speaker-affiliation=speaker.coPresenterAff
 	p.speaker-session
 		strong Talk / 
 		a(href=`/speakers/${speaker.shortname}`)=speaker.title
 		span=speaker.subtitle
+	if speaker.title2
+		hr
+		p.speaker-session
+			strong Talk 2 / 
+			a(href=`/speakers/${speaker.shortname}`)=speaker.title2

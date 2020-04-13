@@ -56,7 +56,13 @@ class SpeakerService {
         affiliation: speaker.affiliation,
         img: speaker.img,
         title: speaker.title,
-        summary: speaker.summary
+        summary: speaker.summary,
+        coPresenter: speaker.coPresenter ? speaker.coPresenter : '',
+        coPresenterAff: speaker.coPresenterAff ? speaker.coPresenterAff : '',
+        coPresenterEmail: speaker.coPresenterEmail ? speaker.coPresenterEmail : '',
+        coPresenterBio: speaker.coPresenterBio ? speaker.coPresenterBio : '',
+        coPresenterImg: speaker.coPresenterImg ? speaker.coPresenterImg : '',
+        title2: speaker.title2 ? speaker.title2 : '',
       };
     });
   }
@@ -113,7 +119,13 @@ class SpeakerService {
         contact: speaker.contact ? speaker.contact : '',
         website: speaker.website ? speaker.website : '',
         email: speaker.email ? speaker.email : '',
-        phone: speaker.phone
+        phone: speaker.phone ? speaker.phone : '',
+        coPresenter: speaker.coPresenter ? speaker.coPresenter : '',
+        coPresenterAff: speaker.coPresenterAff ? speaker.coPresenterAff : '',
+        coPresenterEmail: speaker.coPresenterEmail ? speaker.coPresenterEmail : '',
+        coPresenterBio: speaker.coPresenterBio ? speaker.coPresenterBio : '',
+        coPresenterImg: speaker.coPresenterImg ? speaker.coPresenterImg : '',
+        title2: speaker.title2 ? speaker.title2 : ''
       };
     });
   }
@@ -131,6 +143,7 @@ class SpeakerService {
       shortname: speaker.shortname,
       affiliation: speaker.affiliation,
       other: speaker.other,
+      track: speaker.track,
       time: speaker.time,
       room: speaker.room,
       summary: speaker.summary,
@@ -142,7 +155,14 @@ class SpeakerService {
       website: speaker.website ? speaker.website : '',
       donate: speaker.donate ? speaker.donate : '',
       email: speaker.email ? speaker.email : '',
-      phone: speaker.phone
+      phone: speaker.phone ? speaker.phone : '',
+      coPresenter: speaker.coPresenter ? speaker.coPresenter : '',
+      coPresenterAff: speaker.coPresenterAff ? speaker.coPresenterAff : '',
+      coPresenterEmail: speaker.coPresenterEmail ? speaker.coPresenterEmail : '',
+      coPresenterBio: speaker.coPresenterBio ? speaker.coPresenterBio : '',
+      coPresenterImg: speaker.coPresenterImg ? speaker.coPresenterImg : '',
+      title2: speaker.title2 ? speaker.title2 : '',
+      abstract2: speaker.abstract2
     }
   }
 

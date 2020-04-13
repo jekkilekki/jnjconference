@@ -42,14 +42,14 @@ module.exports = (param) => {
 
   router.use( '/speakers', speakersRoute(param) );
   router.use( '/schedule', scheduleRoute(param) );
-  router.use( '/location', locationRoute(param) );
-  router.use( '/sponsors', sponsorsRoute(param) );
-  router.use( '/feedback', feedbackRoute(param) );
-  router.use( '/tickets', ticketsRoute(param) );
-  router.use( '/team', teamRoute(param) );
+  // router.use( '/location', locationRoute(param) );
+  // router.use( '/sponsors', sponsorsRoute(param) );
+  // router.use( '/feedback', feedbackRoute(param) );
+  // router.use( '/tickets', ticketsRoute(param) );
+  // router.use( '/team', teamRoute(param) );
   router.use( '/code-of-conduct', conductRoute(param) );
   router.use( '/privacy', privacyRoute(param) );
-  router.use( '/chat', chatRoute(param) );
+  // router.use( '/chat', chatRoute(param) );
   router.use( '/faqs', faqsRoute(param) );
 
   return router;

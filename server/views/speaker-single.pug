@@ -18,6 +18,7 @@ block content
             .speaker-photo(style=`background-image: url('/img/people/${speaker.img}')`)
             .attendee-img-shadow
             .attendee-img-shadow-yellow
+
             if speaker.contact
               .speaker-contact
                 if speaker.website
@@ -32,7 +33,16 @@ block content
                   a.speaker-email(href=`mailto:${speaker.email}`)
                     i.fas.fa-envelope
                     span Email
+
           .speaker-meta
+            small.speaker-data
+              span.speaker-room(class=speaker.room)= speaker.room
+              if speaker.track
+                | &nbsp;&bull;&nbsp;
+                span.speaker-track(class=speaker.track)= speaker.track
+              if speaker.time
+                | &nbsp;&bull;&nbsp;
+                span.speaker-time= speaker.time
             h3.speaker-name=speaker.name
               //- a(href=`/speakers/${speaker.shortname}`)=speaker.name
             p.speaker-affiliation=speaker.affiliation
@@ -43,12 +53,29 @@ block content
               if speaker.subtitle
                 span=speaker.subtitle
               if speaker.name1
-                p.co-names Presented by
-                  span=speaker.name1
-                  span=speaker.name2
-                  span=speaker.name3
+                p.co-names Presented by 
+                  strong
+                    span=speaker.name1
+                      | , 
+                    span=speaker.name2
+                      | , 
+                    span=speaker.name3
+              if speaker.coPresenter
+                p.co-names Co-Presenter: 
+                  strong
+                    span=speaker.coPresenter
             p.speaker-abstract
               !=speaker.abstract
+              if speaker.title2
+                hr
+                p.speaker-session
+                  strong Talk 2 / 
+                  //- !=speaker.title
+                  a(href=`/speakers/${speaker.shortname}`)=speaker.title2
+                p.speaker-abstract
+                  !=speaker.abstract2
+            hr
+
             .speaker-info
               h4.speaker-bio-title About #{speaker.nickname}
               p.speaker-bio
@@ -76,6 +103,15 @@ block content
                     small=speaker.aff3
                     p.speaker-bio
                       !=speaker.bio3
+            if speaker.coPresenter
+              hr
+              .co-presenters.single
+                .speaker-info
+                  .co-photo(style=`background: url(/img/people/${speaker.coPresenterImg})`)
+                  h4.speaker-bio-title About #{speaker.coPresenter}
+                  small=speaker.coPresenterAff
+                  p.speaker-bio
+                    !=speaker.coPresenterBio
 
       .page-button-container
-        a.page-button(src='/speakers') View All Speakers
+        a.page-button(href='/speakers') View All Speakers

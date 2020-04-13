@@ -2008,7 +2008,8 @@ header.page-section .container {
 }
 
 .page-button-container {
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
+  margin-bottom: 8rem;
   display: block;
   width: 100%;
   text-align: center;
@@ -2306,7 +2307,7 @@ header.page-section .container {
   /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 3rem;
-  padding: 1rem 2rem 4rem;
+  padding: 1rem 2rem 0rem;
   justify-content: center;
 }
 
@@ -2497,6 +2498,40 @@ header.page-section .container {
   display: block;
   font-size: 90%;
   color: rgb(75,12,120);
+}
+
+.speaker-meta p.speaker-name {
+  margin-top: -1rem;
+  font-family: "Recursive", "Open Sans Condensed", Arial, Helvetica, sans-serif;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'wgth' var(--recursive-wght), 'wdth' var(--recursive-wdth), 'CASL' var(--recursive-CASL);
+  --recursive-wght: 700;
+}
+
+.speaker-meta p.speaker-name span {
+  font-family: "Barlow", "Fira Sans Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-variation-settings: 'wght' var(--barlow-wght), 'wdth' var(--barlow-wdth);
+}
+
+.speaker-data {
+  margin-bottom: -0.5rem;
+  display: block;
+}
+
+.speaker-room {
+  background: rgb(75,12,120);
+  color: white;
+  padding: 2px 12px;
+  border-radius: 20px;
+}
+
+.Zoom {
+  background: #2D8CFF!important;
+}
+
+.Pre-Recorded {
+  /* background: rgb(0, 120, 50)!important; */
+  background: red!important;
 }
 
 /* .speaker-img {
@@ -2812,6 +2847,17 @@ section.page-section h5.schedule-time {
   position: absolute;
   top: 0;
   left: -100px;
+}
+
+.co-photo.coPresenter {
+  position: absolute;
+  right: -20px;
+  top: -140px;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.74);
+  transform: rotate(-5deg);
 }
 
 @media screen and (max-width: 62rem) {
@@ -3247,6 +3293,12 @@ section.page-section h5.schedule-time {
   padding: 4px 2rem;
   transform: translateX(50%);
   border-radius: 10px;
+}
+
+small.featured-ribbon {
+  text-align: center;
+  padding: 4px 1rem;
+  top: -40px;
 }
 
 .grid-inner {
