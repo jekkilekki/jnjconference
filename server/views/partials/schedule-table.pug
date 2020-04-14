@@ -2,386 +2,64 @@
 .conference-schedule.container
   h2.section-title Conference Schedule
   p.center.info Times in KST: Korea Standard Time (UTC +9)
-  ul.schedule-table
-    li.schedule-row.schedule-header-row
-      h5.schedule-time
-      .schedule-session
-        h4 Featured
-      //- .schedule-session
-      //-   h4 YouTube Live
-      //- .schedule-session
-      //-   h4 Zoom
-      //- .schedule-session
-      //-   h4 Other
-    
-    li.schedule-row
-      h5.schedule-time 10:45
-      .schedule-session
-        .speaker-photo-box
-          .speaker-photo(style="background-image: url('/img/people/unavailable.jpg')")
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-        .speaker-meta
-          h6.speaker Opening Ceremony
-          //- p.speaker Lindsay and Sunil
-      
-    li.schedule-row.plenary
-      h5.schedule-time 11:00
-      .schedule-session
-        .speaker-photo-box
-          a.speaker-photo(style="background-image: url('/img/people/Tomomi_Kumai_2.jpg')", href="/plenary/Tomomi_Kumai")
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-        .speaker-meta
-          small.special Plenary
-          h6.speaker Tomomi Kumai
-          p.session 
-            a(href="/plenary/Tomomi_Kumai") Creating a Safe Space for Transformation
-          p.subtitle Raising Intercultural Awareness for Language Teachers and Learners
-    
-    li.schedule-row
-      h5.schedule-time 12:00
-      .schedule-session
-        .speaker-photo-box
-          .speaker-photo(style="background-image: url('/img/people/unavailable.jpg')")
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-        .speaker-meta
-          h6.speaker Lunch hour
-          small.special Open video library
-    
-    li.schedule-row
-      h5.schedule-time 13:00
-      .schedule-session
-        .speaker-photo-box
-          a.speaker-photo(style="background-image: url('/img/people/Hwang_Yunjeong_2.jpg')", href="/featured/Yunjeong_Hwang")
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-        .speaker-meta
-          h6.speaker Yunjeong Hwang
-          p.session 
-            a(href="/featured/Yunjeong_Hwang") Essential Legal Knowledge on Employment and Labor for Expat Teachers
-      
-    li.schedule-row
-      h5.schedule-time 14:00
-      .schedule-session
-        .speaker-photo-box
-          a.speaker-photo(style="background-image: url('/img/people/TNKR_thirds.jpg')", href="/featured/TNKR")
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-        .speaker-meta
-          h6.speaker Teach North Korean Refugees
-          p.session 
-            a(href="/featured/TNKR") KOTESOL Gives Back
-          p.subtitle Empowering North Korean Refugees Through ELT
-
-    li.schedule-row
-      h5.schedule-time 15:00
-      .schedule-session
-        .speaker-photo-box
-          a.speaker-photo(style="background-image: url('/img/people/Stafford_Lumsden.jpg')", href="/featured/Stafford_Lumsden")
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-        .speaker-meta
-          h6.speaker Stafford Lumsden
-          p.session 
-            a(href="/featured/Stafford_Lumsden") Timeline of an outbreak
-          p.subtitle Australian Higher Education Moving to Online Teaching in Response to Novel Coronavirus 19
-
-    li.schedule-row
-      h5.schedule-time 16:00
-      .schedule-session
-        .speaker-photo-box
-          .speaker-photo(style="background-image: url('/img/people/unavailable.jpg')")
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-        .speaker-meta
-          h6.speaker TBA
+  div.schedule-tabs
+    h5.schedule-time
+    .schedule-session
+      h4.schedule-tab.active(id="featured-tab") Featured
+    .schedule-session
+      h4.schedule-tab(id="zoom-tab") Zoom Sessions
+    .schedule-session
+      h4.schedule-tab(id="recorded-tab") Pre-Recorded
   
-  //-     li 11:00 - Plenary - Tomomi Kumai
-  //-     li 12:00 - Lunch hour - Open video library
-  //-     li 13:00 - YunJeong
-  //-     li 14:00 - TNKR
-  //-     li 15:00 - Stafford
-  //-     li 16:00 - TBA
-  //- table.schedule-section
-  //-   tr.schedule-header
-  //-     th.schedule-time Time
-  //-     th.schedule-track Track
-  //-     th.schedule-session Session
-  //-     th.schedule-speaker Speaker
-  //-     th.schedule-venue Venue
-  //-   tr.main-event
-  //-     td.schedule-time 9:00 am
-  //-     td.schedule-session(colspan='3') Registration
-  //-     td.schedule-venue Foyer
-  //-   //- 10:00
-  //-   tr
-  //-     td.schedule-time(rowspan='7') 
-  //-       span 10:00 am
-  //-     td.schedule-span(colspan='4')
-  //-       | Workshops I 
-  //-       span (50 min)
-  //-   tr.room1
-  //-     td.schedule-track Track 1
-  //-     td.schedule-session
-  //-       a(href='/speakers/Jeffrey_Shelley') Anthropology: Building a Class Culture with Impact 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker J. Shea Lee
-  //-     td.schedule-venue 103
-  //-   tr.room2
-  //-     td.schedule-track Track 2
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 104
-  //-   tr.room3
-  //-     td.schedule-track Track 3
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 201
-  //-   tr.room4
-  //-     td.schedule-track Track 4
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 202
-  //-   tr.room5
-  //-     td.schedule-track Track 5
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 203
-  //-   tr.room6
-  //-     td.schedule-track Track 6
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 204
-  //-   //- 11:00
-  //-   tr
-  //-     td.schedule-time(rowspan='7') 
-  //-       span 11:00 am
-  //-     td.schedule-span(colspan='4')
-  //-       | Workshops II 
-  //-       span (50 min)
-  //-   tr.room1
-  //-     td.schedule-track Track 1
-  //-     td.schedule-session
-  //-       a(href='/speakers/Jeffrey_Shelley') Anthropology: Building a Class Culture with Impact 
-  //-         i.fas.fa-external-link-alt 
-  //-     td.schedule-speaker J. Shea Lee
-  //-     td.schedule-venue 103
-  //-   tr.room2
-  //-     td.schedule-track Track 2
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 104
-  //-   tr.room3
-  //-     td.schedule-track Track 3
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 201
-  //-   tr.room4
-  //-     td.schedule-track Track 4
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 202
-  //-   tr.room5
-  //-     td.schedule-track Track 5
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 203
-  //-   tr.room6
-  //-     td.schedule-track Track 6
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 204
-  //-   //- Lunch (12:00)
-  //-   tr
-  //-     td.schedule-time 12:00 pm
-  //-     td.schedule-span(colspan='4')
-  //-       | Lunch Break 
-  //-       span (60 min)
-  //-   //- Plenary (1:00)
-  //-   tr.main-event
-  //-     td.schedule-time 1:00 pm
-  //-     td.schedule-track Plenary Session
-  //-     td.schedule-session Teacher Identity in Language Teaching 
-  //-       i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Jack C. Richards
-  //-     td.schedule-venue Onnuri Hall
-  //-   //- 2:00
-  //-   tr
-  //-     td.schedule-time(rowspan='7') 
-  //-       span 2:00 pm
-  //-     td.schedule-span(colspan='4')
-  //-       | Workshops III 
-  //-       span (50 min)
-  //-   tr.room1
-  //-     td.schedule-track Track 1
-  //-     td.schedule-session
-  //-       a(href='/speakers/Jeffrey_Shelley') Anthropology: Building a Class Culture with Impact 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker J. Shea Lee
-  //-     td.schedule-venue 103
-  //-   tr.room2
-  //-     td.schedule-track Track 2
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 104
-  //-   tr.room3
-  //-     td.schedule-track Track 3
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 201
-  //-   tr.room4
-  //-     td.schedule-track Track 4
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 202
-  //-   tr.room5
-  //-     td.schedule-track Track 5
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 203
-  //-   tr.room6
-  //-     td.schedule-track Track 6
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 204
-  //-   //- 3:00
-  //-   tr
-  //-     td.schedule-time(rowspan='7') 
-  //-       span 3:00 pm
-  //-     td.schedule-span(colspan='4')
-  //-       | Workshops IV 
-  //-       span (50 min)
-  //-   tr.room1
-  //-     td.schedule-track Track 1
-  //-     td.schedule-session
-  //-       a(href='/speakers/Luis_Caballero') Using Critical Pedagogy in the EFL Classroom 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Luis Caballero
-  //-     td.schedule-venue 103
-  //-   tr.room2
-  //-     td.schedule-track Track 2
-  //-     td.schedule-session
-  //-       a(href='/speakers/Rhea_Metituk') Integration Station &ndash; Increasing Student Talking time &amp; Spicing up the Classroom 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Rhea Metituk
-  //-     td.schedule-venue 104
-  //-   tr.room3
-  //-     td.schedule-track Track 3
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 201
-  //-   tr.room4
-  //-     td.schedule-track Track 4
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 202
-  //-   tr.room5
-  //-     td.schedule-track Track 5
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 203
-  //-   tr.room6
-  //-     td.schedule-track Track 6
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 204
-  //-   //- 4:00
-  //-   tr
-  //-     td.schedule-time(rowspan='7') 
-  //-       span 4:00 pm
-  //-     td.schedule-span(colspan='4')
-  //-       | Workshops V 
-  //-       span (50 min)
-  //-   tr.room1
-  //-     td.schedule-track Track 1
-  //-     td.schedule-session
-  //-       a(href='/speakers/Maria_Lisak') Snowstorms &amp; Cheatsheets - End of Term Reflection 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Maria Lisak
-  //-     td.schedule-venue 103
-  //-   tr.room2
-  //-     td.schedule-track Track 2
-  //-     td.schedule-session
-  //-       a(href='/speakers/Aaron_Snowberger') Atomic Habits that will turn you into a Superhero 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Aaron Snowberger
-  //-     td.schedule-venue 104
-  //-   tr.room3
-  //-     td.schedule-track Track 3
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 201
-  //-   tr.room
-  //-     td.schedule-track Track 4
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 202
-  //-   tr.room
-  //-     td.schedule-track Track 5
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 203
-  //-   tr.room
-  //-     td.schedule-track Track 6
-  //-     td.schedule-session
-  //-       a(href='/speakers/Paul_Johnson') To Be Rather than to Seem: Teaching Tips from a Punk Existentialist 
-  //-         i.fas.fa-external-link-alt
-  //-     td.schedule-speaker Paul Johnson
-  //-     td.schedule-venue 204
-  //-   //- Closing
-  //-   tr.main-event
-  //-     td.schedule-time 4:50 pm
-  //-     td.schedule-session(colspan='3') Closing Ceremony
-  //-     td.schedule-venue Onnuri Hall
-  //-   tr
-  //-     td.schedule-time(rowspan='2') 5:00 pm
-  //-     td.schedule-span(colspan='4') After party &amp; dinner
-  //-   tr.main-event
-  //-     td.schedule-session(colspan='3') Restaurant in Shinshikaji
-  //-     td.schedule-venue TBA
+  div.schedule
+    ul.schedule-table(id="fixed-sessions")
+      li.schedule-row
+        h5.schedule-time 10:45
+        .schedule-session
+          .speaker-photo-box
+            .speaker-photo(style="background-image: url('/img/people/unavailable.jpg')")
+            .attendee-img-shadow
+            .attendee-img-shadow-yellow
+          .speaker-meta
+            h6.speaker Opening Ceremony
+            //- p.speaker Lindsay and Sunil
+        
+      li.schedule-row.plenary
+        h5.schedule-time 11:00
+        .schedule-session
+          .speaker-photo-box
+            a.speaker-photo(style="background-image: url('/img/people/Tomomi_Kumai_2.jpg')", href="/plenary/Tomomi_Kumai")
+            .attendee-img-shadow
+            .attendee-img-shadow-yellow
+          .speaker-meta
+            small.special Plenary
+            h6.speaker Tomomi Kumai
+            p.session 
+              a(href="/plenary/Tomomi_Kumai") Creating a Safe Space for Transformation
+            p.subtitle Raising Intercultural Awareness for Language Teachers and Learners
+      
+      li.schedule-row
+        h5.schedule-time 12:00
+        .schedule-session
+          .speaker-photo-box
+            .speaker-photo(style="background-image: url('/img/people/unavailable.jpg')")
+            .attendee-img-shadow
+            .attendee-img-shadow-yellow
+          .speaker-meta
+            h6.speaker Lunch hour
+            small.special Open video library
+  
+    div.schedule-rotation
+      //- YouTube Live Sessions
+      include schedule-youtube
+      
+      //- Zoom Sessions
+      include schedule-zoom
+      
+      //- Pre-recorded Sessions
+      include schedule-recorded
+
   p.center.info Tentative schedule. Times subject to change without notice.
+
+  //- each speaker in speakers
+  //-   p= speaker.name

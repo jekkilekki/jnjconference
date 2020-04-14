@@ -1,0 +1,18 @@
+//- Pre-Recorded Sessions
+ul.schedule-table(id="pre-recorded-sessions")
+	- var n = 1
+	each speaker in speakers
+		if speaker.room === 'Pre-Recorded'
+			li.schedule-row.shrunk
+				h5.schedule-time= n++
+					| &nbsp;
+					i.fab.fa-youtube(style="color: #ff0000;")
+				.schedule-session
+					.speaker-photo-box
+						a.speaker-photo(style=`background-image: url('/img/people/${speaker.img}')`, href=`/speakers/${speaker.shortname}`)
+						.attendee-img-shadow
+						.attendee-img-shadow-yellow
+					.speaker-meta
+						h6.speaker= speaker.name
+						p.session 
+							a(href=`/speakers/${speaker.shortname}`)= speaker.title

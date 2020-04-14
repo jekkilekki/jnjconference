@@ -2621,8 +2621,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   color: rgb(75,12,120);
 }
 
-.schedule-table {
+div.schedule {
   margin-bottom: 2rem;
+}
+
+.schedule-table {
+  /* margin-bottom: 2rem; */
+  padding-left: 0;
+  transition: all 0.5s;
 }
 
 .schedule-table h4,
@@ -2631,22 +2637,125 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   margin: 0;
 }
 
+.schedule-tabs {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr;
+  list-style: none;
+  grid-gap: 2rem;
+  /* margin-bottom: 2rem; */
+  border-bottom: 2px solid rgb(0, 120, 50);
+  transition: all 0.3s;
+}
+
+/*
+ * Thought about a sliding transition between tabs,
+ * but maybe can't really target pseudo-elements in JS well
+ */
+.schedule-tabs:after {
+  /* content: ''; */
+  position: absolute;
+  background: rgba(176,190,197,0.5);
+  bottom: 0;
+  left: calc( 50px + 2rem);
+  height: 4rem;
+  width: calc( 100% / 3 - 50px );
+  z-index: -1;
+  border-radius: 10px 10px 0 0;
+}
+
+.schedule-session h4 {
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 0;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+.schedule-session h4:hover,
+.schedule-session h4:focus,
+.schedule-session h4:active {
+  background: rgba(176,190,197,0.25);
+}
+
+.schedule-session h4.active {
+  background: rgba(176,190,197,0.5);
+}
+
 .schedule-row {
   display: grid;
-  grid-template-columns: 50px 1fr 1fr 1fr 1fr;
+  grid-template-columns: 50px 1fr 1fr 1fr;
   grid-template-columns: 50px 1fr;
   grid-gap: 2rem;
   margin-bottom: 2rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(176,190,197,1);
+  transition: all 0.3s;
+}
+
+#fixed-sessions {
+  position: relative;
+  height: auto;
+  opacity: 1;
+  display: block;
+  transition: all 0.5s;
+}
+
+#fixed-sessions.hide {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: none;
+}
+
+#youtube-live-sessions,
+#zoom-sessions,
+#pre-recorded-sessions {
+  border-top: 1px solid rgba(176,190,197,1);
+  display: none;
+  transition: all 0.5s;
+}
+
+#youtube-live-sessions.active,
+#zoom-sessions.active,
+#pre-recorded-sessions.active {
+  display: block;
+}
+
+#zoom-sessions .schedule-row {
+  grid-template-columns: 50px 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 60rem) {
+  #zoom-sessions .schedule-row .schedule-session {
+    grid-column: span 3;
+    padding-left: 82px;
+  }
+
+  #zoom-sessions .schedule-row .schedule-session:first-of-type {
+    padding-left: 0px;
+  }
+}
+
+.schedule-rotation {
+  padding-bottom: 2rem;
+}
+
+.schedule-header-row {
+  grid-template-columns: 50px 1fr 1fr 1fr;
 }
 
 .schedule-row.plenary {
   padding: 2rem 0 0;
 }
 
+.schedule-row.shrunk {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
 .schedule-row.plenary:after {
-  background: url(img/bg/stroke-dark.png);
+  /* background: url(img/bg/stroke-dark.png); */
   content: '';
   width: 45%;
   height: 100%;
@@ -2664,7 +2773,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   border: none;
 }
 
-.schedule-row:nth-child(2) {
+.schedule-row:nth-child(1) {
   border: none;
 }
 
@@ -2678,17 +2787,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 section.page-section h5.schedule-time {
   color: rgb(75,12,120);
   margin: 0;
-}
-
-.schedule-session h4 {
   text-align: center;
-  border-bottom: 2px solid rgb(0, 120, 50);
-  padding: 2rem  0 1rem;
-  width: 100%;
+  justify-content: center;
 }
 
 .schedule-session .speaker-photo-box {
-  float: left;
+  /* float: left; */
+  width: 110px;
+  text-align: center;
 }
 
 .schedule-session .speaker-photo,
@@ -2697,6 +2803,14 @@ section.page-section h5.schedule-time {
   width: 80px!important;
   height: 80px!important;
   margin-right: 1.5rem;
+}
+
+.shrunk .schedule-session .speaker-photo,
+.shrunk .schedule-session .attendee-img-shadow,
+.shrunk .schedule-session .attendee-img-shadow-yellow {
+  width: 50px !important;
+  height: 50px !important;
+  margin-left: 1rem;
 }
 
 .schedule-session a.speaker-photo:hover {
@@ -3185,8 +3299,7 @@ section.page-section h5.schedule-time {
   overflow: hidden;
   transition: all 0.3s;
   display: block;
-  background: rgb(0, 120, 50);
-  background: linear-gradient(125deg, rgba(0, 120, 100, 1) 0%, rgb(61, 184, 129) 25%, rgb(251, 209, 161) 40%, rgb(239, 120, 138) 60%, rgb(102, 78, 160) 100%);
+  background: #ffffff;
   /* border: 1px solid transparent; */
   /* box-shadow: 2px 2px 15px rgba(16,16,37,0.5); */
   position: relative;
@@ -3196,6 +3309,7 @@ section.page-section h5.schedule-time {
 
 .grid-item:hover {
   border: none;
+  background: linear-gradient(125deg, rgba(0, 120, 100, 1) 0%, rgb(61, 184, 129) 25%, rgb(251, 209, 161) 40%, rgb(239, 120, 138) 60%, rgb(102, 78, 160) 100%);
 }
 
 .grid-item:hover img {

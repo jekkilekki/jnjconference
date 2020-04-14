@@ -281,3 +281,66 @@ function numberTrans( id, endpt, transDur, transEase ) {
     }
   });
 };
+
+/**
+ * Schedule Tabs Handler
+ */
+var TABS = document.getElementsByClassName( 'schedule-tab' );
+
+for ( var i = 0; i < TABS.length; i++ ) {
+  TABS[i].addEventListener( 'click', setActiveTable );
+}
+
+function setActiveTable(e) {
+
+  switch ( e.target.id ) {
+    case 'zoom-tab':
+      this.className = 'schedule-tab active';
+      document.getElementById( 'featured-tab' ).className = 'schedule-tab';
+      document.getElementById( 'recorded-tab' ).className = 'schedule-tab';
+      deactivateTables();
+      shrinkFixed( true );
+      document.getElementById( 'fixed-sessions' ).className = 'schedule-table';
+      document.getElementById( 'zoom-sessions' ).className = 'schedule-table active';
+      break;
+    case 'recorded-tab':
+      this.className = 'schedule-tab active';
+      document.getElementById( 'featured-tab' ).className = 'schedule-tab';
+      document.getElementById( 'zoom-tab' ).className = 'schedule-tab';
+      deactivateTables();
+      document.getElementById( 'fixed-sessions' ).className = 'schedule-table hide';
+      document.getElementById( 'pre-recorded-sessions' ).className = 'schedule-table active';
+      break;
+    default:
+      document.getElementById( 'featured-tab' ).className = 'schedule-tab active';
+      document.getElementById( 'zoom-tab' ).className = 'schedule-tab';
+      document.getElementById( 'recorded-tab' ).className = 'schedule-tab';
+      deactivateTables();
+      shrinkFixed( false );
+      document.getElementById( 'fixed-sessions' ).className = 'schedule-table';
+      document.getElementById( 'youtube-live-sessions' ).className = 'schedule-table active';
+  }
+}
+
+function deactivateTables() {
+  var SCHEDULES = document.getElementsByClassName( 'schedule-table' );
+
+  for ( var i = 0; i < SCHEDULES.length; i++ ) {
+    SCHEDULES[i].className = 'schedule-table';
+  }
+}
+
+function shrinkFixed( shrink ) {
+  var FIXED = document.getElementById( 'fixed-sessions' ).children;
+
+  if ( shrink ) {
+    for ( var i = 0; i < FIXED.length; i++ ) {
+      FIXED[i].className = FIXED[i].className + ' shrunk';
+    }
+  }
+  else {
+    for ( var i = 0; i < FIXED.length; i++ ) {
+      FIXED[i].className = 'schedule-row';
+    }
+  }
+}
