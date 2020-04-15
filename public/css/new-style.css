@@ -2404,6 +2404,16 @@ header.page-section .container {
     visibility: visible;
 }
 
+.grid-item.hidden:hover {
+  background: transparent!important;
+}
+
+@media screen and (max-width: 1326px) {
+  .grid li.hidden {
+    display: none;
+  }
+}
+
 .speaker-meta .speaker-session {
   margin: -1rem 0 1rem;
   font-size: 1.1rem;

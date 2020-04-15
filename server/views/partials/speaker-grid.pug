@@ -13,8 +13,12 @@ h2.section-title Meet Our Speakers
   ul.grid
     each speaker in speakers
       //- unless speaker.id == 'plenary'
-      li.standard
-        include speaker-grid-single
+      if speaker.shortname === 'hidden'
+        li.standard.hidden
+          //- include speaker-grid-single
+      else
+        li.standard
+          include speaker-grid-single
       
             //- p.speaker-abstract=speaker.abstract
   //-     // </article>
