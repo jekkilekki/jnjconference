@@ -12,7 +12,22 @@ ul.schedule-table(id="pre-recorded-sessions")
 						a.speaker-photo(style=`background-image: url('/img/people/${speaker.img}')`, href=`/speakers/${speaker.shortname}`)
 						.attendee-img-shadow
 						.attendee-img-shadow-yellow
-					.speaker-meta
-						h6.speaker= speaker.name
-						p.session 
-							a(href=`/speakers/${speaker.shortname}`)= speaker.title
+					if speaker.coPresenter
+						.speaker-meta.has-co-presenter
+							.speaker-meta
+								small.special= speaker.track
+								h6.speaker= speaker.name
+									span &nbsp;with 
+									!= speaker.coPresenter
+								.speaker-photo-box.co-presenter
+									.speaker-photo(style=`background-image: url('/img/people/${speaker.coPresenterImg}')`)
+									.attendee-img-shadow
+									.attendee-img-shadow-yellow
+								p.session 
+									a(href=`/speakers/${speaker.shortname}`)= speaker.title
+					else
+						.speaker-meta
+							small.special= speaker.track
+							h6.speaker= speaker.name
+							p.session 
+								a(href=`/speakers/${speaker.shortname}`)= speaker.title

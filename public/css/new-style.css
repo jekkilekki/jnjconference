@@ -2353,10 +2353,10 @@ header.page-section .container {
 }
 
 .speaker-meta {
-  position: relative;
+  /* position: relative; */
   /* top: 50%; */
   /* transform: translateY(-50%); */
-  max-width: 100%;
+  /* max-width: 100%; */
   /* margin: auto; */
 /*   color: white; */
     /* visibility: hidden; */
@@ -2657,6 +2657,17 @@ div.schedule {
   transition: all 0.3s;
 }
 
+.schedule-tabs .schedule-session {
+  align-items: end;
+}
+
+@media screen and (max-width: 40rem) {
+  .schedule-tabs {
+    grid-template-columns: 0px 1fr 1fr 1fr;
+    grid-gap: 0;
+  }
+}
+
 /*
  * Thought about a sliding transition between tabs,
  * but maybe can't really target pseudo-elements in JS well
@@ -2694,13 +2705,30 @@ div.schedule {
 
 .schedule-row {
   display: grid;
-  grid-template-columns: 50px 1fr 1fr 1fr;
+  /* grid-template-columns: 50px 1fr 1fr 1fr; */
   grid-template-columns: 50px 1fr;
   grid-gap: 2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(176,190,197,1);
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 40rem) {
+  .schedule-row {
+    grid-template-columns: 0px 1fr;
+  }
+
+  .schedule-row .schedule-time {
+    transform: rotate(-90deg);
+    margin-bottom: -1rem !important;
+  }
+}
+
+.schedule-row:hover,
+.schedule-row:focus,
+.schedule-row:active {
+  background: rgba(176,190,197,0.25);
 }
 
 #fixed-sessions {
@@ -2739,11 +2767,25 @@ div.schedule {
 @media screen and (max-width: 60rem) {
   #zoom-sessions .schedule-row .schedule-session {
     grid-column: span 3;
-    padding-left: 82px;
+    left: 2rem;
+  }
+
+  #zoom-sessions .schedule-row .schedule-session .speaker-meta {
+    min-width: calc( 100% - 32px );
   }
 
   #zoom-sessions .schedule-row .schedule-session:first-of-type {
-    padding-left: 0px;
+    left: 0;
+  }
+
+  #zoom-sessions .schedule-row .schedule-session:first-of-type .speaker-meta {
+    min-width: auto;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  #zoom-sessions .schedule-row {
+    grid-template-columns: 0px 1fr 1fr 1fr;
   }
 }
 
@@ -2751,16 +2793,16 @@ div.schedule {
   padding-bottom: 2rem;
 }
 
-.schedule-header-row {
+/* .schedule-header-row {
   grid-template-columns: 50px 1fr 1fr 1fr;
-}
+} */
 
 .schedule-row.plenary {
-  padding: 2rem 0 0;
+  padding: 2rem 0;
 }
 
 .schedule-row.shrunk {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   padding-top: 1rem;
 }
 
@@ -2797,6 +2839,7 @@ div.schedule {
 section.page-section h5.schedule-time {
   color: rgb(75,12,120);
   margin: 0;
+  padding-left: 1rem;
   text-align: center;
   justify-content: center;
 }
@@ -2805,6 +2848,10 @@ section.page-section h5.schedule-time {
   /* float: left; */
   width: 110px;
   text-align: center;
+}
+
+.co-presenter .speaker-photo-box {
+  width: 80px;
 }
 
 .schedule-session .speaker-photo,
@@ -2818,9 +2865,90 @@ section.page-section h5.schedule-time {
 .shrunk .schedule-session .speaker-photo,
 .shrunk .schedule-session .attendee-img-shadow,
 .shrunk .schedule-session .attendee-img-shadow-yellow {
-  width: 50px !important;
-  height: 50px !important;
+  width: 60px !important;
+  height: 60px !important;
   margin-left: 1rem;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.shrunk .schedule-session .speaker-photo {
+  z-index: 2;
+}
+
+.shrunk:hover .schedule-session .speaker-photo,
+.shrunk:hover .schedule-session .attendee-img-shadow,
+.shrunk:hover .schedule-session .attendee-img-shadow-yellow {
+  width: 80px!important;
+  height: 80px!important;
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+.speaker-photo-box.co-presenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* right: 0; */
+  left: -7.5rem;
+  z-index: 0;
+  opacity: 0.7;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.shrunk .schedule-session .co-presenter .speaker-photo,
+.shrunk .schedule-session .co-presenter .attendee-img-shadow,
+.shrunk .schedule-session .co-presenter .attendee-img-shadow-yellow {
+  margin: 0;
+  padding: 0;
+}
+
+.shrunk:hover .speaker-photo-box.co-presenter {
+  /* top: -1rem;
+  left: -3.5rem; */
+  opacity: 1;
+  left: -11.5rem;
+  z-index: 1;
+  animation: spin 300ms ease-in 1, moveRightToLeft 0.3s ease-in-out 1;
+  width: 80px;
+  height: 80px;
+}
+
+@media screen and (max-width: 40rem) {
+  .shrunk .speaker-photo-box.co-presenter {
+    left: -6rem;
+  }
+
+  .shrunk:hover .speaker-photo-box.co-presenter {
+    left: -7rem;
+    z-index: 2;
+    animation: spin 300ms ease-in 1, moveRightToLeftSmall 0.3s ease-in-out 1;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes moveRightToLeft {
+  0%   { left: -7.5rem; }
+  100% { left: -10rem; }
+}
+
+@keyframes moveRightToLeftSmall {
+  0%   { left: -6rem; }
+  100% { left: -7rem; }
+}
+
+.shrunk:hover .has-co-presenter.speaker-meta {
+  /* margin-left: 2rem; */
+}
+
+.has-co-presenter .speaker span {
+  font-weight: normal;
+  --recursive-wght: 300!important;
 }
 
 .schedule-session a.speaker-photo:hover {
@@ -2990,7 +3118,7 @@ section.page-section h5.schedule-time {
     text-align: left;
   }
 
-  #home .co-photo {
+  #home .co-presenters .co-photo {
     float: left;
     margin-right: 0.5rem;
     width: 40px;

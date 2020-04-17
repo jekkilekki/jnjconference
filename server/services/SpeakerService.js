@@ -107,6 +107,7 @@ class SpeakerService {
         shortname: speaker.shortname,
         nickname: speaker.nickname,
         affiliation: speaker.affiliation,
+        track: speaker.track,
         other: speaker.other,
         img: speaker.img,
         time: speaker.time,
