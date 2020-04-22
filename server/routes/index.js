@@ -43,7 +43,7 @@ module.exports = (param) => {
   router.use( '/speakers', speakersRoute(param) );
   router.use( '/schedule', scheduleRoute(param) );
   // router.use( '/location', locationRoute(param) );
-  // router.use( '/sponsors', sponsorsRoute(param) );
+  router.use( '/sponsors', sponsorsRoute(param) );
   // router.use( '/feedback', feedbackRoute(param) );
   // router.use( '/tickets', ticketsRoute(param) );
   // router.use( '/team', teamRoute(param) );

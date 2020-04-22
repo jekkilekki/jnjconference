@@ -2,15 +2,18 @@
  * Navigation
  */
 $( '.site-mobile-menu-button' ).click( function() {
-  if ( $( '.site-navigation.mobile-menu' ).hasClass( 'active' ) ) {  
-    $( '.site-navigation.mobile-menu' ).removeClass( 'active'); 
+  if ( ! $( '.site-navigation.mobile-menu' ).hasClass( 'active' ) ) {
+    $( '.site-navigation.mobile-menu' ).addClass( 'active' );
+    $( 'body' ).css( 'overflow-y', 'hidden' );
   } else { 
-    $( '.site-navigation.mobile-menu' ).addClass( 'active' ); 
+    $( '.site-navigation.mobile-menu' ).removeClass( 'active'); 
+    $( 'body' ).css( 'overflow-y', 'auto' );
   }
 });
 
 $( '.site-navigation.mobile-menu .site-menu' ).on( 'click', function() {
   $( '.site-navigation.mobile-menu' ).removeClass( 'active' );
+  $( 'body' ).css( 'overflow-y', 'auto' );
 });
 
 /**
