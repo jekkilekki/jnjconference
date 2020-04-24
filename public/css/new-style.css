@@ -906,7 +906,7 @@ li {
   width: 100%;
   height: 100%;
   z-index: 200;
-  background: rgba(16,16,37,0.75);
+  background: rgba(16,16,37,0.85);
   backdrop-filter: blur(6px);
   align-self: flex-start;
   transition: all 0.3s;
@@ -1766,8 +1766,21 @@ a.button {
   color: white;
 }
 
+.button-book {
+  background: rgb(75,12,120);
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem 0.6rem;
+}
+
+.button-book:hover {
+  opacity: 0.75;
+}
+
 @media screen and (min-width: 30rem) {
-  .button-big {
+  .button-big,
+  .button-book {
     padding: 0.75rem 1.5rem 0.85rem;
   }
   .button-big.inverse {
@@ -1780,6 +1793,12 @@ a.button {
     padding: 1rem 1.5rem 1.25rem;
     font-size: 1.4rem;
   }
+
+  .button-book {
+    font-size: 1.4rem!important;
+    padding: 1rem 1.5rem!important;
+  }
+
   .button-big.inverse {
     padding: 0.9rem 1.5rem 1rem;
   }
@@ -2083,7 +2102,7 @@ header.page-section .container {
 
 .whatis {
   /* background: #232377; */
-  padding: 10rem 0 0;
+  padding: 16rem 0 0;
   /* color: white; */
   margin-top: -5px;
   /* position: absolute; */
