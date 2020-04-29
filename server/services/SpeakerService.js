@@ -33,7 +33,8 @@ class SpeakerService {
         shortbio: plenary.shortbio,
         contact: plenary.contact ? plenary.contact : '',
         website: plenary.website ? plenary.website : '',
-        email: plenary.email ? plenary.email : ''
+        email: plenary.email ? plenary.email : '',
+        live: plenary.live,
       }
     });
   }
@@ -63,6 +64,7 @@ class SpeakerService {
         coPresenterBio: speaker.coPresenterBio ? speaker.coPresenterBio : '',
         coPresenterImg: speaker.coPresenterImg ? speaker.coPresenterImg : '',
         title2: speaker.title2 ? speaker.title2 : '',
+        live: speaker.live,
       };
     });
   }
@@ -93,7 +95,8 @@ class SpeakerService {
         img3: speaker.img3,
         contact: speaker.contact ? speaker.contact : '',
         website: speaker.website ? speaker.website : '',
-        email: speaker.email ? speaker.email : ''
+        email: speaker.email ? speaker.email : '',
+        live: speaker.live,
       };
     });
   }
@@ -126,7 +129,8 @@ class SpeakerService {
         coPresenterEmail: speaker.coPresenterEmail ? speaker.coPresenterEmail : '',
         coPresenterBio: speaker.coPresenterBio ? speaker.coPresenterBio : '',
         coPresenterImg: speaker.coPresenterImg ? speaker.coPresenterImg : '',
-        title2: speaker.title2 ? speaker.title2 : ''
+        title2: speaker.title2 ? speaker.title2 : '',
+        live: speaker.live,
       };
     });
   }
@@ -163,7 +167,8 @@ class SpeakerService {
       coPresenterBio: speaker.coPresenterBio ? speaker.coPresenterBio : '',
       coPresenterImg: speaker.coPresenterImg ? speaker.coPresenterImg : '',
       title2: speaker.title2 ? speaker.title2 : '',
-      abstract2: speaker.abstract2
+      abstract2: speaker.abstract2,
+      live: speaker.live,
     }
   }
 
@@ -175,6 +180,7 @@ class SpeakerService {
     if( ! speaker ) return null;
     return {
       title: speaker.title,
+      subtitle: speaker.subtitle,
       name: speaker.name,
       nickname: speaker.nickname,
       shortname: speaker.shortname,
@@ -190,7 +196,8 @@ class SpeakerService {
       contact: speaker.contact ? speaker.contact : '',
       website: speaker.website ? speaker.website : '',
       email: speaker.email ? speaker.email : '',
-      phone: speaker.phone
+      phone: speaker.phone,
+      live: speaker.live,
     };
   }
 
@@ -233,6 +240,7 @@ class SpeakerService {
       website: speaker.website ? speaker.website : '',
       donate: speaker.donate ? speaker.donate : '',
       email: speaker.email ? speaker.email : '',
+      live: speaker.live,
     };
   }
 

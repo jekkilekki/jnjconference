@@ -153,6 +153,13 @@ $( document ).ready( function() {
   }
 
   $( window ).scroll( function() {
+    if ( $(window).scrollTop() > 70 ) {
+      $( '.site-banner' ).css( 'position', 'fixed' );
+    } else {
+      $( '.site-banner' ).css( 'position', 'static' );
+      console.log( $(window).scrollTop() );
+    }
+    
     if ( $(this).scrollTop() < offset ) {
       $( '.topbutton' ).fadeOut( duration );
       if ( $( 'body' ).attr('id') == 'home' ) {

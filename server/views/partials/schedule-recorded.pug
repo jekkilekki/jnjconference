@@ -6,7 +6,8 @@ ul.schedule-table(id="pre-recorded-sessions")
 			li.schedule-row.shrunk
 				h5.schedule-time= n++
 					| &nbsp;
-					i.fab.fa-youtube(style="color: #ff0000;")
+					a(href=`${speaker.live}`)
+						i.fab.fa-youtube(style="color: #ff0000;")
 				.schedule-session
 					.speaker-photo-box
 						a.speaker-photo(style=`background-image: url('/img/people/${speaker.img}')`, href=`/speakers/${speaker.shortname}`)

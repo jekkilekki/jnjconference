@@ -2,6 +2,7 @@
   "plenary": [
     {
       "id": "plenary",
+      "live": "https://live.kotesolconf.com/sessions/tomomi-kumai/",
       "title": "Creating a Safe Space for Transformation",
       "subtitle": "Raising Intercultural Awareness for Language Teachers and Learners",
       "name": "Tomomi Kumai",
@@ -27,6 +28,7 @@
   "featured": [
     {
       "id": 20201,
+      "live": "https://live.kotesolconf.com/sessions/teach-north-korean-refugees/",
       "title": "KOTESOL Gives Back",
       "subtitle": "Empowering North Korean Refugees Through ELT",
       "name": "Teach North Korean Refugees",
@@ -62,6 +64,7 @@
     },
     {
       "id": 20202,
+      "live": "https://live.kotesolconf.com/sessions/yunjeong-hwang/",
       "title": "Essential Legal Knowledge on Employment and Labor for Expat Teachers",
       "name": "Yunjeong Hwang",
       "nickname": "Yunjeong",
@@ -81,6 +84,7 @@
     },
     {
       "id": 20203,
+      "live": "https://live.kotesolconf.com/sessions/stafford-lumsden/",
       "title": "Timeline of an outbreak",
       "subtitle": "Australian Higher Education Moving to Online Teaching in Response to Novel Coronavirus 19",
       "name": "Stafford Lumsden",
@@ -103,6 +107,7 @@
   "speakers": [
     {
       "id": 202001,
+      "live": "https://live.kotesolconf.com/sessions/lisa-m-hunsberger/",
       "name": "Lisa M. Hunsberger",
       "nickname": "Lisa",
       "shortname": "Lisa_M_Hunsberger",
@@ -145,6 +150,7 @@
     },
     {
       "id": 202002,
+      "live": "https://live.kotesolconf.com/sessions/terri-beadle/",
       "name": "Terri Beadle",
       "nickname": "Terri",
       "shortname": "Terri_Beadle",
@@ -186,6 +192,7 @@
     },
     {
       "id": 202003,
+      "live": "https://live.kotesolconf.com/sessions/kevin-kester/",
       "name": "Kevin Kester",
       "nickname": "Kevin",
       "shortname": "Kevin_Kester",
@@ -236,6 +243,7 @@
     },
     {
       "id": 202004,
+      "live": "https://live.kotesolconf.com/sessions/ehean-kim/",
       "name": "Ehean Kim",
       "nickname": "Ehean",
       "shortname": "Ehean_Kim",
@@ -277,6 +285,7 @@
     },
     {
       "id": 202005,
+      "live": "https://live.kotesolconf.com/sessions/joanne-mccuaig/",
       "name": "Joanne McCuaig",
       "nickname": "Joanne",
       "shortname": "Joanne_McCuaig",
@@ -318,6 +327,7 @@
     },
     {
       "id": 202006,
+      "live": "https://live.kotesolconf.com/sessions/adrienne-seo/",
       "name": "Adrienne Seo",
       "nickname": "Adrienne",
       "shortname": "Adrienne_Seo",
@@ -361,6 +371,7 @@
     },
     {
       "id": 202007,
+      "live": "https://live.kotesolconf.com/sessions/jocelyn-wright/",
       "name": "Jocelyn Wright",
       "nickname": "Jocelyn",
       "shortname": "Jocelyn_Wright",
@@ -402,6 +413,7 @@
     },
     {
       "id": 202008,
+      "live": "https://live.kotesolconf.com/sessions/roger-fusselman/",
       "name": "Roger Fusselman",
       "nickname": "Roger",
       "shortname": "Roger_Fusselman",
@@ -443,6 +455,7 @@
     },
     {
       "id": 202009,
+      "live": "https://live.kotesolconf.com/sessions/brian-raisbeck/",
       "name": "Brian Raisbeck",
       "nickname": "Brian",
       "shortname": "Brian_Raisbeck",
@@ -484,6 +497,7 @@
     },
     {
       "id": 202010,
+      "live": "https://live.kotesolconf.com/sessions/blake-brunner/",
       "name": "Blake Brunner",
       "nickname": "Blake",
       "shortname": "Blake_Brunner",
@@ -525,6 +539,7 @@
     },
     {
       "id": 202011,
+      "live": "https://live.kotesolconf.com/sessions/josh-brunotte/",
       "name": "Josh Brunotte",
       "nickname": "Josh",
       "shortname": "Josh_Brunotte",
@@ -547,7 +562,8 @@
       "summary": "As presentation skills become an increasingly important communication tool on the global stage, the prevalence of public speaking phobia has important implications for the classroom and future workplace success of students. Speaking publicly in a foreign language can create additional sources of anxiety, causing some students’ fear to reach debilitating levels. More effective methods for combating this problem must be developed, and virtual reality-based exposure to public speech acts may hold advantages over the use of traditional instructional methods alone, allowing students to rehearse speeches in low-anxiety environments in front of simulated audiences. This presentation will explore a study conducted with university students in Japan in which presentation skills and mindfulness training, along with VR-based presentation practice, were combined to attempt a reduction in public speaking anxiety. Data from these participants will be compared against a control group who used more traditional, imagination-based home practice methods.",
       "name-family": "Brunotte",
       "name-given": "Josh",
-      "email": "",
+      "contact": "yes",
+      "email": "joshbrunotte@gmail.com",
       "affiliation": "Aichi Prefectural University (Japan)",
       "bio": "Josh Brunotte is an associate professor at Aichi Prefectural University in Nagakute, Japan, where he has been working within the Liberal Education Center since 2017. He researches the intersection of psychology and computer-assisted language teaching, with a focus on how virtual reality and other emerging technologies can help with anxiety reduction related to studying abroad and public speaking. He has also been involved with research into the sleep behaviors of Japanese university students and the implications for language learning.",
       "name-family2": "",
@@ -565,6 +581,7 @@
     },
     {
       "id": 202012,
+      "live": "https://live.kotesolconf.com/sessions/crystal-cho-jones/",
       "name": "Crystal Cho Jones",
       "nickname": "Crystal",
       "shortname": "Crystal_Cho_Jones",
@@ -607,6 +624,7 @@
     },
     {
       "id": 202013,
+      "live": "https://live.kotesolconf.com/sessions/dr-liliana-cuesta-medina/",
       "name": "Dr. Liliana Cuesta Medina",
       "nickname": "Liliana",
       "shortname": "Liliana_Cuesta_Medina",
@@ -648,6 +666,7 @@
     },
     {
       "id": 202014,
+      "live": "https://live.kotesolconf.com/sessions/gereltuya-damdinsuren/",
       "name": "Gereltuya Damdinsuren",
       "nickname": "Gereltuya",
       "shortname": "Gereltuya_Damdinsuren",
@@ -690,6 +709,7 @@
     },
     {
       "id": 202015,
+      "live": "https://live.kotesolconf.com/sessions/rosa-dene-david/",
       "name": "Rosa Dene David",
       "nickname": "Rosa",
       "shortname": "Rosa_Dene_David",
@@ -731,6 +751,7 @@
     },
     {
       "id": 202016,
+      "live": "https://live.kotesolconf.com/sessions/kristy-dolson/",
       "name": "Kristy Dolson",
       "nickname": "Kristy",
       "shortname": "Kristy_Dolson",
@@ -772,6 +793,7 @@
     },
     {
       "id": 202017,
+      "live": "https://live.kotesolconf.com/sessions/simon-fisher/",
       "name": "Simon Fisher",
       "nickname": "Simon",
       "shortname": "Simon_Fisher",
@@ -813,6 +835,7 @@
     },
     {
       "id": 202018,
+      "live": "https://live.kotesolconf.com/sessions/kevin-kester/",
       "name": "Kevin Kester",
       "nickname": "Kevin",
       "shortname": "Kevin_Kester",
@@ -854,6 +877,7 @@
     },
     {
       "id": 202019,
+      "live": "https://live.kotesolconf.com/sessions/grace-kudlack/",
       "name": "Grace Kudlack",
       "nickname": "Grace",
       "shortname": "Grace_Kudlack",
@@ -895,6 +919,7 @@
     },
     {
       "id": 202020,
+      "live": "https://live.kotesolconf.com/sessions/marc-c-lebane/",
       "name": "Mr. Marc C. LeBane",
       "nickname": "Marc",
       "shortname": "Marc_C_LeBane",
@@ -938,6 +963,7 @@
     },
     {
       "id": 202021,
+      "live": "https://live.kotesolconf.com/sessions/angie-lee/",
       "name": "Angie Lee",
       "nickname": "Angie",
       "shortname": "Angie_Lee",
@@ -980,6 +1006,7 @@
     },
     {
       "id": 202022,
+      "live": "https://live.kotesolconf.com/sessions/andrew-lerner/",
       "name": "Andrew Lerner",
       "nickname": "Andrew",
       "shortname": "Andrew_Lerner",
@@ -1021,6 +1048,7 @@
     },
     {
       "id": 202023,
+      "live": "https://live.kotesolconf.com/sessions/samantha-levinson/",
       "name": "Samantha Levinson",
       "nickname": "Samantha",
       "shortname": "Samantha_Levinson",
@@ -1062,6 +1090,7 @@
     },
     {
       "id": 202024,
+      "live": "https://live.kotesolconf.com/sessions/mei-fung-lewina-lung/",
       "name": "Mei Fung Lewina Lung",
       "nickname": "Mei Fung Lewina",
       "shortname": "Mei_Fung_Lewina_Lung",
@@ -1103,6 +1132,7 @@
     },
     {
       "id": 202025,
+      "live": "https://live.kotesolconf.com/sessions/maria-teresa-martinez-garcia/",
       "name": "Maria Teresa Martinez-Garcia",
       "nickname": "Maria",
       "shortname": "Maria_Teresa_Martinez-Garcia",
@@ -1144,6 +1174,7 @@
     },
     {
       "id": 202026,
+      "live": "https://live.kotesolconf.com/sessions/jermaine-s-mcdougald/",
       "name": "Jermaine S. McDougald",
       "nickname": "Jermaine",
       "shortname": "Jermaine_S_McDougald",
@@ -1185,6 +1216,7 @@
     },
     {
       "id": 202027,
+      "live": "https://live.kotesolconf.com/sessions/elexis-nelson/",
       "name": "Elexis Nelson",
       "nickname": "Elexis",
       "shortname": "Elexis_Nelson",
@@ -1226,6 +1258,7 @@
     },
     {
       "id": 202028,
+      "live": "https://live.kotesolconf.com/sessions/reece-randall/",
       "name": "Reece Randall",
       "nickname": "Reece",
       "shortname": "Reece_Randall",
@@ -1268,6 +1301,7 @@
     },
     {
       "id": 202029,
+      "live": "https://live.kotesolconf.com/sessions/cyril-reyes/",
       "name": "Cyril Reyes",
       "nickname": "Cyril",
       "shortname": "Cyril_Reyes",
@@ -1309,6 +1343,7 @@
     },
     {
       "id": 202030,
+      "live": "https://live.kotesolconf.com/sessions/bruce-screws/",
       "name": "Bruce Screws",
       "nickname": "Bruce",
       "shortname": "Bruce_Screws",
@@ -1350,6 +1385,7 @@
     },
     {
       "id": 202031,
+      "live": "https://live.kotesolconf.com/sessions/lindamulage-chaturi-nisansala-silva/",
       "name": "Lindamulage Chaturi Nisansala Silva",
       "nickname": "Lindamulage Chaturi Nisansala",
       "shortname": "Lindamulage_Chaturi_Nisansala_Silva",
@@ -1393,6 +1429,7 @@
     },
     {
       "id": 202032,
+      "live": "https://live.kotesolconf.com/sessions/joseph-tomei/",
       "name": "Joseph Tomei",
       "nickname": "Joseph",
       "shortname": "Joseph_Tomei",
@@ -1438,6 +1475,7 @@
     },
     {
       "id": 202033,
+      "live": "https://live.kotesolconf.com/sessions/caroline-torres/",
       "name": "Caroline Torres",
       "nickname": "Caroline",
       "shortname": "Caroline_Torres",
@@ -1481,6 +1519,7 @@
     },
     {
       "id": 202034,
+      "live": "https://live.kotesolconf.com/sessions/daniel-jones/",
       "name": "Daniel Jones",
       "nickname": "Daniel",
       "shortname": "Daniel_Jones",

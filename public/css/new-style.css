@@ -632,34 +632,45 @@ li {
 } */
 
 .call-to-action {
-  background: #00b9f1;
-  background: #d63aff;
+  background: rgb(75,12,120);
   color: white;
   width: 100%;
-  margin: 0;
-  padding: 2rem 0;
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  height: 70px;
 }
 
 .call-to-action p {
-  max-width: 65%;
+  /* max-width: 65%; */
+  margin: 0;
 }
 
-.call-title {
+/* .call-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
-}
+} */
 
 .call-to-action .btn {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   right: 2rem;
   transform: translateY(-50%);
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   border-radius: 10px;
-  color: #232377;
-  border-radius: 50px;
-  font-size: 1.3rem;
+  font-size: 1.3rem; */
+  background: white;
+  color: rgb(75,12,120);
+  margin-left: 10px;
+  text-shadow: none;
+}
+
+.call-to-action .btn:hover {
+  background: rgb(0,120,50);
   color: white;
 }
 
@@ -681,11 +692,24 @@ li {
   }
 
   .call-to-action .btn {
-    position: relative;
+    /* position: relative;
     top: 0;
     right: 0;
     display: inline-block;
-    margin: 1.5rem auto -1rem;
+    margin: 1.5rem auto -1rem; */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .call-to-action .hide-for-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .call-to-action p {
+    line-height: 1.8;
+    margin-top: -0.5rem;
   }
 }
 
@@ -695,7 +719,7 @@ li {
 }
 
 .site-banner {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 100%;
   background: #35485e;
@@ -711,6 +735,11 @@ li {
 .site-banner * {
   transition: height, background 0.3s;
 }
+
+/* #home .site-banner {
+  position: absolute;
+  top: 70px;
+} */
 
 #home .site-banner.top,
 #home .site-banner.top .header-top,
@@ -856,7 +885,7 @@ li {
   color: rgb(0, 120, 50);
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 66rem) {
   .header-top .banner-location {
     display: none;
   }
@@ -1106,7 +1135,7 @@ li {
 
 .conference-info {
   position: absolute;
-    top: 90px;
+    top: 200px;
     color: white;
     width: 100%;
     /* text-shadow: 0 2px 2px #201b48; */
@@ -1466,7 +1495,7 @@ h1.conference-title:after {
 /* Biggest size - smaller above this*/
 @media screen and (min-width: 72rem) {
   .conference-info {
-    top: 120px;
+    top: 200px;
   }
 
   .conference-title {
@@ -1665,6 +1694,8 @@ background: rgb(107,184,139);
   max-height: 1400px;
   /* height: 50vw; */
   overflow: hidden;
+  top: -100px;
+  z-index: -1;
 }
 
 /* .hero:after {
@@ -1968,7 +1999,7 @@ a.ticket-button {
 }
 
 header.page-section {
-  margin-top: 76px;
+  /* margin-top: 76px; */
   margin-bottom: 6rem;
   padding-top: 6rem;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#232377+0,201b48+67,161637+100 */
@@ -2461,6 +2492,7 @@ header.page-section .container {
   color: #101025;
   opacity: 0.7;
   display: block;
+  background: transparent;
 }
 
 .speaker-contact a span {
@@ -2473,6 +2505,53 @@ header.page-section .container {
 .speaker-contact a:hover {
   border: none;
   color: rgb(0, 120, 50);
+}
+
+a.speaker-live {
+  color: red;
+  background: transparent;
+  padding: 3px 10px;
+  margin: 0 -10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+a.speaker-live.Zoom {
+  color: #2D8CFF;
+  background: transparent!important;
+}
+
+a.speaker-live:hover {
+  background: red;
+  color: white;
+}
+
+a.speaker-live.Zoom:hover {
+  background: #2D8CFF!important;
+  color: white;
+}
+
+.speaker-data a.speaker-live {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.speaker-data a.speaker-live span {
+  margin-left: 5px;
+}
+
+.speaker-data a.speaker-live:hover {
+  border: none;
+  border-bottom: 2px solid red;
+  background: transparent;
+  color: red;
+}
+
+.speaker-data a.speaker-live.Zoom:hover {
+  border-bottom: 2px solid #2D8CFF;
+  background: transparent!important;
+  color: #2D8CFF;
 }
 
 .speaker-meta .speaker-affiliation {
@@ -2664,6 +2743,11 @@ div.schedule {
   /* margin-bottom: 2rem; */
   padding-left: 0;
   transition: all 0.5s;
+}
+
+.speaker .youtube {
+  color: red;
+  margin-right: 5px;
 }
 
 .schedule-table h4,
@@ -4450,6 +4534,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 
 .speaker-photo-box {
   display: block;
+  height: auto!important;
+  width: auto!important;
 }
 
 .speaker-photo {
@@ -5844,7 +5930,7 @@ h4.sponsor-section-title {
   margin-top: 0;
 }
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 66rem) {
   .top-buttons {
     margin-top: -0.75rem;
   }

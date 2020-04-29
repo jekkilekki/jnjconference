@@ -7,7 +7,7 @@ block content
       h2.page-section-title= speaker.name
       p.section-subtitle.center= speaker.affiliation
       .center.venue-pdf
-        a.button(href='/speakers') View All Speakers
+        a.button(href='https://live.kotesolconf.com/all-sessions/') View LIVE Sessions
   section.page-section
     .container.small
       //- h2.section-title Meet our Speakers
@@ -21,6 +21,13 @@ block content
 
             if speaker.contact
               .speaker-contact
+                if speaker.live
+                  a(href=`${speaker.live}` class=`speaker-live ${speaker.room}`)
+                    if speaker.room === 'Zoom'
+                      i.fas.fa-video
+                    else
+                      i.fab.fa-youtube
+                    span LIVE (login required)
                 if speaker.website
                   a.speaker-website(href=`${speaker.website}`)
                     i.fas.fa-globe
@@ -43,13 +50,21 @@ block content
               if speaker.time
                 | &nbsp;&bull;&nbsp;
                 span.speaker-time= speaker.time
+              if speaker.live
+                | &nbsp;&bull;&nbsp;
+                a(href=`${speaker.live}` class=`speaker-live ${speaker.room}`)
+                  if speaker.room === 'Zoom'
+                    i.fas.fa-video
+                  else
+                    i.fab.fa-youtube
+                  span LIVE
             h3.speaker-name=speaker.name
               //- a(href=`/speakers/${speaker.shortname}`)=speaker.name
             p.speaker-affiliation=speaker.affiliation
             p.speaker-session
               strong Talk / 
               //- !=speaker.title
-              a(href=`/speakers/${speaker.shortname}`)=speaker.title
+              a(href=`${speaker.live}`)=speaker.title
               if speaker.subtitle
                 span=speaker.subtitle
               if speaker.name1
